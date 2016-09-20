@@ -10,9 +10,7 @@
 		D840B3111D915AC2000E8C0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3101D915AC2000E8C0E /* main.m */; };
 		D840B3141D915AC2000E8C0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3131D915AC2000E8C0E /* AppDelegate.m */; };
 		D840B3171D915AC2000E8C0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3161D915AC2000E8C0E /* ViewController.m */; };
-		D840B31A1D915AC2000E8C0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D840B3181D915AC2000E8C0E /* Main.storyboard */; };
 		D840B31C1D915AC2000E8C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D840B31B1D915AC2000E8C0E /* Assets.xcassets */; };
-		D840B31F1D915AC2000E8C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D840B31D1D915AC2000E8C0E /* LaunchScreen.storyboard */; };
 		D840B32A1D915AC2000E8C0E /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3291D915AC2000E8C0E /* _____Tests.m */; };
 		D840B3351D915AC2000E8C0E /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3341D915AC2000E8C0E /* _____UITests.m */; };
 /* End PBXBuildFile section */
@@ -41,9 +39,7 @@
 		D840B3131D915AC2000E8C0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D840B3151D915AC2000E8C0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D840B3161D915AC2000E8C0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D840B3191D915AC2000E8C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D840B31B1D915AC2000E8C0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D840B31E1D915AC2000E8C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D840B3201D915AC2000E8C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D840B3251D915AC2000E8C0E /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D840B3291D915AC2000E8C0E /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
@@ -105,10 +101,6 @@
 				D840B3131D915AC2000E8C0E /* AppDelegate.m */,
 				D840B3151D915AC2000E8C0E /* ViewController.h */,
 				D840B3161D915AC2000E8C0E /* ViewController.m */,
-				D840B3181D915AC2000E8C0E /* Main.storyboard */,
-				D840B31B1D915AC2000E8C0E /* Assets.xcassets */,
-				D840B31D1D915AC2000E8C0E /* LaunchScreen.storyboard */,
-				D840B3201D915AC2000E8C0E /* Info.plist */,
 				D840B30F1D915AC2000E8C0E /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -117,6 +109,8 @@
 		D840B30F1D915AC2000E8C0E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D840B31B1D915AC2000E8C0E /* Assets.xcassets */,
+				D840B3201D915AC2000E8C0E /* Info.plist */,
 				D840B3101D915AC2000E8C0E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -246,9 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D840B31F1D915AC2000E8C0E /* LaunchScreen.storyboard in Resources */,
 				D840B31C1D915AC2000E8C0E /* Assets.xcassets in Resources */,
-				D840B31A1D915AC2000E8C0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,25 +301,6 @@
 			targetProxy = D840B3311D915AC2000E8C0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D840B3181D915AC2000E8C0E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D840B3191D915AC2000E8C0E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D840B31D1D915AC2000E8C0E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D840B31E1D915AC2000E8C0E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D840B3371D915AC2000E8C0E /* Debug */ = {
@@ -418,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -430,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,6 +478,7 @@
 				D840B33B1D915AC2000E8C0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D840B33C1D915AC2000E8C0E /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +487,7 @@
 				D840B33E1D915AC2000E8C0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D840B33F1D915AC2000E8C0E /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +496,7 @@
 				D840B3411D915AC2000E8C0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
