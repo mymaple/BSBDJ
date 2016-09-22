@@ -1,13 +1,13 @@
 //
-//  MapleEssenceViewController.h
+//  MapleTabBarController.h
 //  百思不得姐
 //
 //  Created by mymaple on 16/9/21.
 //  Copyright © 2016年 mymaple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTabBarController.h"
 
-@interface MapleEssenceViewController : UIViewController
+@interface MapleTabBarController : BaseTabBarController
 
 @end

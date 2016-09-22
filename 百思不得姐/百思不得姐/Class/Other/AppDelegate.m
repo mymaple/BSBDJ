@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "BaseTabBarController.h"
+#import "MapleTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     //首页初始化
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    BaseTabBarController *vc = [[BaseTabBarController alloc]init];
+    MapleTabBarController *vc = [[MapleTabBarController alloc]init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     

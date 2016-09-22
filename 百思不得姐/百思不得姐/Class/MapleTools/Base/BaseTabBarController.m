@@ -8,11 +8,8 @@
 
 #import "BaseTabBarController.h"
 
+#import "MapleNavigationController.h"
 
-#import "MapleMeViewController.h"
-#import "MapleNewViewController.h"
-#import "MapleEssenceViewController.h"
-#import "MapleFriendTrendsViewController.h"
 
 @interface BaseTabBarController ()
 
@@ -23,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = BACKGROUND_COLOR;
     [self configView];
 }
 
@@ -33,46 +31,13 @@
 
 
 - (void)configView {
-    //通过appearance统一设置 文字属性 带有UI_APPEARANCE_SELECTOR
-    UITabBarItem *item = [UITabBarItem appearance];
-    //正常文字设置
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
-    //选中文字设置
-    NSMutableDictionary *attrsSelected = [NSMutableDictionary dictionary];
-    attrsSelected[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrsSelected[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    [item setTitleTextAttributes:attrsSelected forState:UIControlStateSelected];
     
-    
-
-    [self addChildViewController:[[MapleEssenceViewController alloc]init]
-                     titleDidSet:@"精华"
-                           image:@"tabBar_essence_icon"
-                   imageOriginal:@"tabBar_essence_click_icon"];
-    
-
-    [self addChildViewController:[[MapleNewViewController alloc]init]
-                     titleDidSet:@"新帖"
-                           image:@"tabBar_new_icon"
-                   imageOriginal:@"tabBar_new_click_icon"];
-    
-
-    [self addChildViewController:[[MapleFriendTrendsViewController alloc]init]
-                     titleDidSet:@"关注"
-                           image:@"tabBar_friendTrends_icon"
-                   imageOriginal:@"tabBar_friendTrends_click_icon"];
-    
-
-    [self addChildViewController:[[MapleMeViewController alloc]init]
-                     titleDidSet:@"我"
-                           image:@"tabBar_me_icon"
-                   imageOriginal:@"tabBar_me_click_icon"];
-
 }
 
+
+/**
+ *  子控制器配置
+ */
 - (void)addChildViewController:(UIViewController *)childController
                          title:(NSString*)title
                          image:(NSString*)image
@@ -97,10 +62,14 @@
     [item setTitleTextAttributes:attrsSelected forState:UIControlStateSelected];
 
     childController.tabBarItem = item;
-    [self addChildViewController:childController];
+    MapleNavigationController *navc = [[MapleNavigationController alloc]initWithRootViewController:childController];
+    childController.navigationItem.title = title;
+    [self addChildViewController:navc];
 }
 
-//
+/**
+ *  子控制器配置(已经去渲染)
+ */
 - (void)addChildViewController:(UIViewController *)childController
                    titleDidSet:(NSString*)titleDidSet
                          image:(NSString*)image
@@ -116,7 +85,9 @@
     
     
     childController.tabBarItem = item;
-    [self addChildViewController:childController];
+    MapleNavigationController *navc = [[MapleNavigationController alloc]initWithRootViewController:childController];
+    childController.navigationItem.title = titleDidSet;
+    [self addChildViewController:navc];
 }
 
 /*

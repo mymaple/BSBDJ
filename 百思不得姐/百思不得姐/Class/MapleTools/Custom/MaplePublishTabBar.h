@@ -1,5 +1,5 @@
 //
-//  MapleMeViewController.h
+//  MaplePublishTabBar.h
 //  百思不得姐
 //
 //  Created by mymaple on 16/9/21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapleMeViewController : UIViewController
+@interface MaplePublishTabBar : UITabBar
 
 @end

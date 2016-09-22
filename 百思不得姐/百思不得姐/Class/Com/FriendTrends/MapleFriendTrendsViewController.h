@@ -6,8 +6,8 @@
 //  Copyright © 2016年 mymaple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MapleFriendTrendsViewController : UIViewController
+@interface MapleFriendTrendsViewController : BaseViewController
 
 @end
