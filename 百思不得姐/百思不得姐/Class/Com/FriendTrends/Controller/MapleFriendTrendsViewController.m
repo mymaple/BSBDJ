@@ -7,6 +7,7 @@
 //
 
 #import "MapleFriendTrendsViewController.h"
+#import "MapleRecommendViewController.h"
 
 @interface MapleFriendTrendsViewController ()
 
@@ -25,6 +26,9 @@
 
 - (void)leftClick:(UIButton*)btn {
     DebugLog(@"");
+    MapleRecommendViewController *vc = [[MapleRecommendViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

@@ -7,22 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D83BB7F21D92E58700B5434C /* MapleEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7D21D92E58700B5434C /* MapleEssenceViewController.m */; };
-		D83BB7F31D92E58700B5434C /* MapleFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7D51D92E58700B5434C /* MapleFriendTrendsViewController.m */; };
-		D83BB7F41D92E58700B5434C /* MapleMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7D81D92E58700B5434C /* MapleMeViewController.m */; };
-		D83BB7F51D92E58700B5434C /* MapleNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7DB1D92E58700B5434C /* MapleNewViewController.m */; };
-		D83BB7F61D92E58700B5434C /* MapleTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7DE1D92E58700B5434C /* MapleTabBarController.m */; };
-		D83BB7F71D92E58700B5434C /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7E21D92E58700B5434C /* BaseTabBarController.m */; };
-		D83BB7F81D92E58700B5434C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7E41D92E58700B5434C /* BaseViewController.m */; };
-		D83BB7F91D92E58700B5434C /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7E71D92E58700B5434C /* UIViewExt.m */; };
-		D83BB7FA1D92E58700B5434C /* MaplePublishTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7EA1D92E58700B5434C /* MaplePublishTabBar.m */; };
-		D83BB7FB1D92E58700B5434C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7EF1D92E58700B5434C /* AppDelegate.m */; };
-		D83BB7FC1D92E58700B5434C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB7F01D92E58700B5434C /* main.m */; };
-		D83BB8021D92F58700B5434C /* MapleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB8011D92F58700B5434C /* MapleNavigationController.m */; };
-		D83BB8051D92F61700B5434C /* MapleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BB8041D92F61700B5434C /* MapleBarButtonItem.m */; };
+		56E853F6698396ED30E81D04 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2720031F54DFF76CEAB3F3 /* libPods-百思不得姐.a */; };
 		D840B31C1D915AC2000E8C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D840B31B1D915AC2000E8C0E /* Assets.xcassets */; };
 		D840B32A1D915AC2000E8C0E /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3291D915AC2000E8C0E /* _____Tests.m */; };
 		D840B3351D915AC2000E8C0E /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D840B3341D915AC2000E8C0E /* _____UITests.m */; };
+		D87833071D963B7200CC7F93 /* MapleEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */; };
+		D87833081D963B7200CC7F93 /* MapleFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832D31D963B7200CC7F93 /* MapleFriendTrendsViewController.m */; };
+		D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87832D41D963B7200CC7F93 /* MapleFriendTrendsViewController.xib */; };
+		D878330A1D963B7200CC7F93 /* MapleRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832D61D963B7200CC7F93 /* MapleRecommendViewController.m */; };
+		D878330B1D963B7200CC7F93 /* MapleRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87832D71D963B7200CC7F93 /* MapleRecommendViewController.xib */; };
+		D878330C1D963B7200CC7F93 /* MapleRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832DA1D963B7200CC7F93 /* MapleRecommendCategory.m */; };
+		D878330D1D963B7200CC7F93 /* MapleRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832DC1D963B7200CC7F93 /* MapleRecommendUser.m */; };
+		D878330E1D963B7200CC7F93 /* MapleRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832DF1D963B7200CC7F93 /* MapleRecommendCategoryCell.m */; };
+		D878330F1D963B7200CC7F93 /* MapleRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87832E01D963B7200CC7F93 /* MapleRecommendCategoryCell.xib */; };
+		D87833101D963B7200CC7F93 /* MapleRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832E21D963B7200CC7F93 /* MapleRecommendUserCell.m */; };
+		D87833111D963B7200CC7F93 /* MapleRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87832E31D963B7200CC7F93 /* MapleRecommendUserCell.xib */; };
+		D87833121D963B7200CC7F93 /* MapleMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832E61D963B7200CC7F93 /* MapleMeViewController.m */; };
+		D87833131D963B7200CC7F93 /* MapleNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832E91D963B7200CC7F93 /* MapleNewViewController.m */; };
+		D87833141D963B7200CC7F93 /* MapleTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832EC1D963B7200CC7F93 /* MapleTabBarController.m */; };
+		D87833151D963B7200CC7F93 /* MapleAFHTTPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832F01D963B7200CC7F93 /* MapleAFHTTPTools.m */; };
+		D87833161D963B7200CC7F93 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832F31D963B7200CC7F93 /* BaseTabBarController.m */; };
+		D87833171D963B7200CC7F93 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832F51D963B7200CC7F93 /* BaseViewController.m */; };
+		D87833181D963B7200CC7F93 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832F81D963B7200CC7F93 /* UIViewExt.m */; };
+		D87833191D963B7200CC7F93 /* MapleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832FB1D963B7200CC7F93 /* MapleBarButtonItem.m */; };
+		D878331A1D963B7200CC7F93 /* MapleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832FD1D963B7200CC7F93 /* MapleNavigationController.m */; };
+		D878331B1D963B7200CC7F93 /* MaplePublishTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */; };
+		D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833041D963B7200CC7F93 /* AppDelegate.m */; };
+		D878331D1D963B7200CC7F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833051D963B7200CC7F93 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,33 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D83BB7D11D92E58700B5434C /* MapleEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssenceViewController.h; sourceTree = "<group>"; };
-		D83BB7D21D92E58700B5434C /* MapleEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleEssenceViewController.m; sourceTree = "<group>"; };
-		D83BB7D41D92E58700B5434C /* MapleFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleFriendTrendsViewController.h; sourceTree = "<group>"; };
-		D83BB7D51D92E58700B5434C /* MapleFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleFriendTrendsViewController.m; sourceTree = "<group>"; };
-		D83BB7D71D92E58700B5434C /* MapleMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleMeViewController.h; sourceTree = "<group>"; };
-		D83BB7D81D92E58700B5434C /* MapleMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleMeViewController.m; sourceTree = "<group>"; };
-		D83BB7DA1D92E58700B5434C /* MapleNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleNewViewController.h; sourceTree = "<group>"; };
-		D83BB7DB1D92E58700B5434C /* MapleNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleNewViewController.m; sourceTree = "<group>"; };
-		D83BB7DD1D92E58700B5434C /* MapleTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTabBarController.h; sourceTree = "<group>"; };
-		D83BB7DE1D92E58700B5434C /* MapleTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleTabBarController.m; sourceTree = "<group>"; };
-		D83BB7E11D92E58700B5434C /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
-		D83BB7E21D92E58700B5434C /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
-		D83BB7E31D92E58700B5434C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		D83BB7E41D92E58700B5434C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		D83BB7E61D92E58700B5434C /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
-		D83BB7E71D92E58700B5434C /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
-		D83BB7E91D92E58700B5434C /* MaplePublishTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePublishTabBar.h; sourceTree = "<group>"; };
-		D83BB7EA1D92E58700B5434C /* MaplePublishTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaplePublishTabBar.m; sourceTree = "<group>"; };
-		D83BB7EC1D92E58700B5434C /* CommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
-		D83BB7EE1D92E58700B5434C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D83BB7EF1D92E58700B5434C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D83BB7F01D92E58700B5434C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D83BB7F11D92E58700B5434C /* MaplePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePrefixHeader.pch; sourceTree = "<group>"; };
-		D83BB8001D92F58700B5434C /* MapleNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleNavigationController.h; sourceTree = "<group>"; };
-		D83BB8011D92F58700B5434C /* MapleNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleNavigationController.m; sourceTree = "<group>"; };
-		D83BB8031D92F61700B5434C /* MapleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleBarButtonItem.h; sourceTree = "<group>"; };
-		D83BB8041D92F61700B5434C /* MapleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleBarButtonItem.m; sourceTree = "<group>"; };
+		4B7A6BC004D1F8B75292DEB3 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
+		8F2720031F54DFF76CEAB3F3 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D840B30C1D915AC1000E8C0E /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D840B31B1D915AC2000E8C0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D840B3201D915AC2000E8C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +65,50 @@
 		D840B3301D915AC2000E8C0E /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D840B3341D915AC2000E8C0E /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		D840B3361D915AC2000E8C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87832CE1D963B7200CC7F93 /* MapleEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssenceViewController.h; sourceTree = "<group>"; };
+		D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleEssenceViewController.m; sourceTree = "<group>"; };
+		D87832D21D963B7200CC7F93 /* MapleFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleFriendTrendsViewController.h; sourceTree = "<group>"; };
+		D87832D31D963B7200CC7F93 /* MapleFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleFriendTrendsViewController.m; sourceTree = "<group>"; };
+		D87832D41D963B7200CC7F93 /* MapleFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		D87832D51D963B7200CC7F93 /* MapleRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleRecommendViewController.h; sourceTree = "<group>"; };
+		D87832D61D963B7200CC7F93 /* MapleRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleRecommendViewController.m; sourceTree = "<group>"; };
+		D87832D71D963B7200CC7F93 /* MapleRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleRecommendViewController.xib; sourceTree = "<group>"; };
+		D87832D91D963B7200CC7F93 /* MapleRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleRecommendCategory.h; sourceTree = "<group>"; };
+		D87832DA1D963B7200CC7F93 /* MapleRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleRecommendCategory.m; sourceTree = "<group>"; };
+		D87832DB1D963B7200CC7F93 /* MapleRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleRecommendUser.h; sourceTree = "<group>"; };
+		D87832DC1D963B7200CC7F93 /* MapleRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleRecommendUser.m; sourceTree = "<group>"; };
+		D87832DE1D963B7200CC7F93 /* MapleRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleRecommendCategoryCell.h; sourceTree = "<group>"; };
+		D87832DF1D963B7200CC7F93 /* MapleRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleRecommendCategoryCell.m; sourceTree = "<group>"; };
+		D87832E01D963B7200CC7F93 /* MapleRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		D87832E11D963B7200CC7F93 /* MapleRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleRecommendUserCell.h; sourceTree = "<group>"; };
+		D87832E21D963B7200CC7F93 /* MapleRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleRecommendUserCell.m; sourceTree = "<group>"; };
+		D87832E31D963B7200CC7F93 /* MapleRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleRecommendUserCell.xib; sourceTree = "<group>"; };
+		D87832E51D963B7200CC7F93 /* MapleMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleMeViewController.h; sourceTree = "<group>"; };
+		D87832E61D963B7200CC7F93 /* MapleMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleMeViewController.m; sourceTree = "<group>"; };
+		D87832E81D963B7200CC7F93 /* MapleNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleNewViewController.h; sourceTree = "<group>"; };
+		D87832E91D963B7200CC7F93 /* MapleNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleNewViewController.m; sourceTree = "<group>"; };
+		D87832EB1D963B7200CC7F93 /* MapleTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTabBarController.h; sourceTree = "<group>"; };
+		D87832EC1D963B7200CC7F93 /* MapleTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleTabBarController.m; sourceTree = "<group>"; };
+		D87832EF1D963B7200CC7F93 /* MapleAFHTTPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleAFHTTPTools.h; sourceTree = "<group>"; };
+		D87832F01D963B7200CC7F93 /* MapleAFHTTPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleAFHTTPTools.m; sourceTree = "<group>"; };
+		D87832F21D963B7200CC7F93 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		D87832F31D963B7200CC7F93 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		D87832F41D963B7200CC7F93 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D87832F51D963B7200CC7F93 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D87832F71D963B7200CC7F93 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		D87832F81D963B7200CC7F93 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		D87832FA1D963B7200CC7F93 /* MapleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleBarButtonItem.h; sourceTree = "<group>"; };
+		D87832FB1D963B7200CC7F93 /* MapleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleBarButtonItem.m; sourceTree = "<group>"; };
+		D87832FC1D963B7200CC7F93 /* MapleNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleNavigationController.h; sourceTree = "<group>"; };
+		D87832FD1D963B7200CC7F93 /* MapleNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleNavigationController.m; sourceTree = "<group>"; };
+		D87832FE1D963B7200CC7F93 /* MaplePublishTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePublishTabBar.h; sourceTree = "<group>"; };
+		D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaplePublishTabBar.m; sourceTree = "<group>"; };
+		D87833011D963B7200CC7F93 /* CommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
+		D87833031D963B7200CC7F93 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D87833041D963B7200CC7F93 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D87833051D963B7200CC7F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D87833061D963B7200CC7F93 /* MaplePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePrefixHeader.pch; sourceTree = "<group>"; };
+		E93B7DD4773EE6AD696C2281 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E853F6698396ED30E81D04 /* libPods-百思不得姐.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,134 +137,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D83BB7CE1D92E58700B5434C /* Class */ = {
+		161FD6E73B32FDA7B88016E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D83BB7CF1D92E58700B5434C /* Com */,
-				D83BB7DF1D92E58700B5434C /* MapleTools */,
-				D83BB7ED1D92E58700B5434C /* Other */,
+				8F2720031F54DFF76CEAB3F3 /* libPods-百思不得姐.a */,
 			);
-			path = Class;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D83BB7CF1D92E58700B5434C /* Com */ = {
+		23908FBD902C31E6BF94F0C5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D83BB7D01D92E58700B5434C /* Essence */,
-				D83BB7D31D92E58700B5434C /* FriendTrends */,
-				D83BB7D61D92E58700B5434C /* Me */,
-				D83BB7D91D92E58700B5434C /* New */,
-				D83BB7DC1D92E58700B5434C /* TabBar */,
+				4B7A6BC004D1F8B75292DEB3 /* Pods-百思不得姐.debug.xcconfig */,
+				E93B7DD4773EE6AD696C2281 /* Pods-百思不得姐.release.xcconfig */,
 			);
-			path = Com;
-			sourceTree = "<group>";
-		};
-		D83BB7D01D92E58700B5434C /* Essence */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7D11D92E58700B5434C /* MapleEssenceViewController.h */,
-				D83BB7D21D92E58700B5434C /* MapleEssenceViewController.m */,
-			);
-			path = Essence;
-			sourceTree = "<group>";
-		};
-		D83BB7D31D92E58700B5434C /* FriendTrends */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7D41D92E58700B5434C /* MapleFriendTrendsViewController.h */,
-				D83BB7D51D92E58700B5434C /* MapleFriendTrendsViewController.m */,
-			);
-			path = FriendTrends;
-			sourceTree = "<group>";
-		};
-		D83BB7D61D92E58700B5434C /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7D71D92E58700B5434C /* MapleMeViewController.h */,
-				D83BB7D81D92E58700B5434C /* MapleMeViewController.m */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		D83BB7D91D92E58700B5434C /* New */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7DA1D92E58700B5434C /* MapleNewViewController.h */,
-				D83BB7DB1D92E58700B5434C /* MapleNewViewController.m */,
-			);
-			path = New;
-			sourceTree = "<group>";
-		};
-		D83BB7DC1D92E58700B5434C /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7DD1D92E58700B5434C /* MapleTabBarController.h */,
-				D83BB7DE1D92E58700B5434C /* MapleTabBarController.m */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		D83BB7DF1D92E58700B5434C /* MapleTools */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7E01D92E58700B5434C /* Base */,
-				D83BB7E51D92E58700B5434C /* Category */,
-				D83BB7E81D92E58700B5434C /* Custom */,
-				D83BB7EB1D92E58700B5434C /* Defines */,
-			);
-			path = MapleTools;
-			sourceTree = "<group>";
-		};
-		D83BB7E01D92E58700B5434C /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7E11D92E58700B5434C /* BaseTabBarController.h */,
-				D83BB7E21D92E58700B5434C /* BaseTabBarController.m */,
-				D83BB7E31D92E58700B5434C /* BaseViewController.h */,
-				D83BB7E41D92E58700B5434C /* BaseViewController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		D83BB7E51D92E58700B5434C /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7E61D92E58700B5434C /* UIViewExt.h */,
-				D83BB7E71D92E58700B5434C /* UIViewExt.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		D83BB7E81D92E58700B5434C /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB8001D92F58700B5434C /* MapleNavigationController.h */,
-				D83BB8011D92F58700B5434C /* MapleNavigationController.m */,
-				D83BB7E91D92E58700B5434C /* MaplePublishTabBar.h */,
-				D83BB7EA1D92E58700B5434C /* MaplePublishTabBar.m */,
-				D83BB8031D92F61700B5434C /* MapleBarButtonItem.h */,
-				D83BB8041D92F61700B5434C /* MapleBarButtonItem.m */,
-			);
-			path = Custom;
-			sourceTree = "<group>";
-		};
-		D83BB7EB1D92E58700B5434C /* Defines */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7EC1D92E58700B5434C /* CommonDefines.h */,
-			);
-			path = Defines;
-			sourceTree = "<group>";
-		};
-		D83BB7ED1D92E58700B5434C /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				D83BB7EE1D92E58700B5434C /* AppDelegate.h */,
-				D83BB7EF1D92E58700B5434C /* AppDelegate.m */,
-				D83BB7F01D92E58700B5434C /* main.m */,
-				D83BB7F11D92E58700B5434C /* MaplePrefixHeader.pch */,
-			);
-			path = Other;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D840B3031D915AC1000E8C0E = {
@@ -243,6 +161,8 @@
 				D840B3281D915AC2000E8C0E /* 百思不得姐Tests */,
 				D840B3331D915AC2000E8C0E /* 百思不得姐UITests */,
 				D840B30D1D915AC1000E8C0E /* Products */,
+				23908FBD902C31E6BF94F0C5 /* Pods */,
+				161FD6E73B32FDA7B88016E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,7 +179,7 @@
 		D840B30E1D915AC2000E8C0E /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				D83BB7CE1D92E58700B5434C /* Class */,
+				D87832CB1D963B7200CC7F93 /* Class */,
 				D840B30F1D915AC2000E8C0E /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -292,6 +212,184 @@
 			path = "百思不得姐UITests";
 			sourceTree = "<group>";
 		};
+		D87832CB1D963B7200CC7F93 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D87832CC1D963B7200CC7F93 /* Com */,
+				D87832ED1D963B7200CC7F93 /* MapleTools */,
+				D87833021D963B7200CC7F93 /* Other */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		D87832CC1D963B7200CC7F93 /* Com */ = {
+			isa = PBXGroup;
+			children = (
+				D87832CD1D963B7200CC7F93 /* Essence */,
+				D87832D01D963B7200CC7F93 /* FriendTrends */,
+				D87832E41D963B7200CC7F93 /* Me */,
+				D87832E71D963B7200CC7F93 /* New */,
+				D87832EA1D963B7200CC7F93 /* TabBar */,
+			);
+			path = Com;
+			sourceTree = "<group>";
+		};
+		D87832CD1D963B7200CC7F93 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				D87832CE1D963B7200CC7F93 /* MapleEssenceViewController.h */,
+				D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		D87832D01D963B7200CC7F93 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				D87832D11D963B7200CC7F93 /* Controller */,
+				D87832D81D963B7200CC7F93 /* Model */,
+				D87832DD1D963B7200CC7F93 /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		D87832D11D963B7200CC7F93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D87832D21D963B7200CC7F93 /* MapleFriendTrendsViewController.h */,
+				D87832D31D963B7200CC7F93 /* MapleFriendTrendsViewController.m */,
+				D87832D41D963B7200CC7F93 /* MapleFriendTrendsViewController.xib */,
+				D87832D51D963B7200CC7F93 /* MapleRecommendViewController.h */,
+				D87832D61D963B7200CC7F93 /* MapleRecommendViewController.m */,
+				D87832D71D963B7200CC7F93 /* MapleRecommendViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D87832D81D963B7200CC7F93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D87832D91D963B7200CC7F93 /* MapleRecommendCategory.h */,
+				D87832DA1D963B7200CC7F93 /* MapleRecommendCategory.m */,
+				D87832DB1D963B7200CC7F93 /* MapleRecommendUser.h */,
+				D87832DC1D963B7200CC7F93 /* MapleRecommendUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D87832DD1D963B7200CC7F93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D87832DE1D963B7200CC7F93 /* MapleRecommendCategoryCell.h */,
+				D87832DF1D963B7200CC7F93 /* MapleRecommendCategoryCell.m */,
+				D87832E01D963B7200CC7F93 /* MapleRecommendCategoryCell.xib */,
+				D87832E11D963B7200CC7F93 /* MapleRecommendUserCell.h */,
+				D87832E21D963B7200CC7F93 /* MapleRecommendUserCell.m */,
+				D87832E31D963B7200CC7F93 /* MapleRecommendUserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D87832E41D963B7200CC7F93 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				D87832E51D963B7200CC7F93 /* MapleMeViewController.h */,
+				D87832E61D963B7200CC7F93 /* MapleMeViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		D87832E71D963B7200CC7F93 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				D87832E81D963B7200CC7F93 /* MapleNewViewController.h */,
+				D87832E91D963B7200CC7F93 /* MapleNewViewController.m */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		D87832EA1D963B7200CC7F93 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D87832EB1D963B7200CC7F93 /* MapleTabBarController.h */,
+				D87832EC1D963B7200CC7F93 /* MapleTabBarController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D87832ED1D963B7200CC7F93 /* MapleTools */ = {
+			isa = PBXGroup;
+			children = (
+				D87832EE1D963B7200CC7F93 /* AFNetworking */,
+				D87832F11D963B7200CC7F93 /* Base */,
+				D87832F61D963B7200CC7F93 /* Category */,
+				D87832F91D963B7200CC7F93 /* Custom */,
+				D87833001D963B7200CC7F93 /* Defines */,
+			);
+			path = MapleTools;
+			sourceTree = "<group>";
+		};
+		D87832EE1D963B7200CC7F93 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D87832EF1D963B7200CC7F93 /* MapleAFHTTPTools.h */,
+				D87832F01D963B7200CC7F93 /* MapleAFHTTPTools.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		D87832F11D963B7200CC7F93 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D87832F21D963B7200CC7F93 /* BaseTabBarController.h */,
+				D87832F31D963B7200CC7F93 /* BaseTabBarController.m */,
+				D87832F41D963B7200CC7F93 /* BaseViewController.h */,
+				D87832F51D963B7200CC7F93 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D87832F61D963B7200CC7F93 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D87832F71D963B7200CC7F93 /* UIViewExt.h */,
+				D87832F81D963B7200CC7F93 /* UIViewExt.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D87832F91D963B7200CC7F93 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D87832FA1D963B7200CC7F93 /* MapleBarButtonItem.h */,
+				D87832FB1D963B7200CC7F93 /* MapleBarButtonItem.m */,
+				D87832FC1D963B7200CC7F93 /* MapleNavigationController.h */,
+				D87832FD1D963B7200CC7F93 /* MapleNavigationController.m */,
+				D87832FE1D963B7200CC7F93 /* MaplePublishTabBar.h */,
+				D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		D87833001D963B7200CC7F93 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				D87833011D963B7200CC7F93 /* CommonDefines.h */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		D87833021D963B7200CC7F93 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D87833031D963B7200CC7F93 /* AppDelegate.h */,
+				D87833041D963B7200CC7F93 /* AppDelegate.m */,
+				D87833051D963B7200CC7F93 /* main.m */,
+				D87833061D963B7200CC7F93 /* MaplePrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D840B3391D915AC2000E8C0E /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
+				6FC0677C934C09E712225BC7 /* [CP] Check Pods Manifest.lock */,
 				D840B3081D915AC1000E8C0E /* Sources */,
 				D840B3091D915AC1000E8C0E /* Frameworks */,
 				D840B30A1D915AC1000E8C0E /* Resources */,
+				02D39DDCA9C981B893A36FB0 /* [CP] Embed Pods Frameworks */,
+				5901A9B81D7EAA042687F19C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,6 +500,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D878330B1D963B7200CC7F93 /* MapleRecommendViewController.xib in Resources */,
+				D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */,
+				D878330F1D963B7200CC7F93 /* MapleRecommendCategoryCell.xib in Resources */,
+				D87833111D963B7200CC7F93 /* MapleRecommendUserCell.xib in Resources */,
 				D840B31C1D915AC2000E8C0E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,24 +524,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02D39DDCA9C981B893A36FB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5901A9B81D7EAA042687F19C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FC0677C934C09E712225BC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D840B3081D915AC1000E8C0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D83BB7F91D92E58700B5434C /* UIViewExt.m in Sources */,
-				D83BB7F31D92E58700B5434C /* MapleFriendTrendsViewController.m in Sources */,
-				D83BB8051D92F61700B5434C /* MapleBarButtonItem.m in Sources */,
-				D83BB7FA1D92E58700B5434C /* MaplePublishTabBar.m in Sources */,
-				D83BB7F41D92E58700B5434C /* MapleMeViewController.m in Sources */,
-				D83BB7FB1D92E58700B5434C /* AppDelegate.m in Sources */,
-				D83BB7F61D92E58700B5434C /* MapleTabBarController.m in Sources */,
-				D83BB7F21D92E58700B5434C /* MapleEssenceViewController.m in Sources */,
-				D83BB7F71D92E58700B5434C /* BaseTabBarController.m in Sources */,
-				D83BB7F81D92E58700B5434C /* BaseViewController.m in Sources */,
-				D83BB8021D92F58700B5434C /* MapleNavigationController.m in Sources */,
-				D83BB7FC1D92E58700B5434C /* main.m in Sources */,
-				D83BB7F51D92E58700B5434C /* MapleNewViewController.m in Sources */,
+				D87833181D963B7200CC7F93 /* UIViewExt.m in Sources */,
+				D878331B1D963B7200CC7F93 /* MaplePublishTabBar.m in Sources */,
+				D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */,
+				D878330D1D963B7200CC7F93 /* MapleRecommendUser.m in Sources */,
+				D87833191D963B7200CC7F93 /* MapleBarButtonItem.m in Sources */,
+				D87833131D963B7200CC7F93 /* MapleNewViewController.m in Sources */,
+				D87833151D963B7200CC7F93 /* MapleAFHTTPTools.m in Sources */,
+				D87833081D963B7200CC7F93 /* MapleFriendTrendsViewController.m in Sources */,
+				D878331D1D963B7200CC7F93 /* main.m in Sources */,
+				D87833161D963B7200CC7F93 /* BaseTabBarController.m in Sources */,
+				D87833121D963B7200CC7F93 /* MapleMeViewController.m in Sources */,
+				D87833071D963B7200CC7F93 /* MapleEssenceViewController.m in Sources */,
+				D878331A1D963B7200CC7F93 /* MapleNavigationController.m in Sources */,
+				D87833101D963B7200CC7F93 /* MapleRecommendUserCell.m in Sources */,
+				D878330C1D963B7200CC7F93 /* MapleRecommendCategory.m in Sources */,
+				D87833171D963B7200CC7F93 /* BaseViewController.m in Sources */,
+				D87833141D963B7200CC7F93 /* MapleTabBarController.m in Sources */,
+				D878330E1D963B7200CC7F93 /* MapleRecommendCategoryCell.m in Sources */,
+				D878330A1D963B7200CC7F93 /* MapleRecommendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,29 +717,35 @@
 		};
 		D840B33A1D915AC2000E8C0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7A6BC004D1F8B75292DEB3 /* Pods-百思不得姐.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "百思不得姐/Class/Other/MaplePrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		D840B33B1D915AC2000E8C0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93B7DD4773EE6AD696C2281 /* Pods-百思不得姐.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "百思不得姐/Class/Other/MaplePrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

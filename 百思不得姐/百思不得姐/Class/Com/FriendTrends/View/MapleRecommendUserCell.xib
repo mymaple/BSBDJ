@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" rowHeight="113" id="KGk-i7-Jjw" customClass="MapleRecommendUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-yQ-cBd">
+                        <rect key="frame" x="10" y="32" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="e3P-SB-wax"/>
+                            <constraint firstAttribute="height" constant="50" id="l1z-Yj-zIj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6In-FH-qDx">
+                        <rect key="frame" x="80" y="32" width="44" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REy-8A-N8c">
+                        <rect key="frame" x="80" y="67" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAf-cO-sTN">
+                        <rect key="frame" x="241" y="44" width="51" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="T0q-Z3-YBF"/>
+                            <constraint firstAttribute="height" constant="25" id="mPW-d7-z5l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="+ 关注" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.15195792729999999" blue="0.1994536988" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" backgroundImage="FollowBtnClickBg">
+                            <color key="titleColor" red="1" green="0.42753692789999997" blue="0.75092301650000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPe-57-FOI" userLabel="Line">
+                        <rect key="frame" x="0.0" y="111.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1PN-dR-z7K"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6In-FH-qDx" firstAttribute="leading" secondItem="P0G-yQ-cBd" secondAttribute="trailing" constant="20" id="3gO-ug-uxs"/>
+                    <constraint firstItem="REy-8A-N8c" firstAttribute="bottom" secondItem="P0G-yQ-cBd" secondAttribute="bottom" id="7JN-03-RlT"/>
+                    <constraint firstItem="HAf-cO-sTN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Epq-Cz-HWk"/>
+                    <constraint firstItem="P0G-yQ-cBd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Gxm-mU-Ivz"/>
+                    <constraint firstAttribute="trailing" secondItem="WPe-57-FOI" secondAttribute="trailing" id="H2y-QG-XYA"/>
+                    <constraint firstItem="P0G-yQ-cBd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="RfK-Wg-vL8"/>
+                    <constraint firstItem="REy-8A-N8c" firstAttribute="leading" secondItem="6In-FH-qDx" secondAttribute="leading" id="Src-nx-A8M"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HAf-cO-sTN" secondAttribute="trailing" constant="20" id="Wvq-eh-wWb"/>
+                    <constraint firstItem="6In-FH-qDx" firstAttribute="top" secondItem="P0G-yQ-cBd" secondAttribute="top" id="e0G-j5-NJa"/>
+                    <constraint firstAttribute="bottom" secondItem="WPe-57-FOI" secondAttribute="bottom" id="j9l-ey-zcB"/>
+                    <constraint firstItem="WPe-57-FOI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ytc-f8-WL4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCountLabel" destination="REy-8A-N8c" id="o7j-cP-YKd"/>
+                <outlet property="headerImageView" destination="P0G-yQ-cBd" id="8Fc-0L-gwc"/>
+                <outlet property="isFollowBtn" destination="HAf-cO-sTN" id="Jyg-xO-ji1"/>
+                <outlet property="screenNameLabel" destination="6In-FH-qDx" id="ven-La-8GI"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="260.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>
