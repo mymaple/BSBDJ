@@ -16,6 +16,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
+#import <MJRefresh.h>
 
 #import "MapleRecommendCategory.h"
 #import "MapleRecommendCategoryCell.h"
@@ -25,7 +26,7 @@
 
 static NSString* const MAPLECategroy = @"categroy";
 static NSString* const MAPLEUser= @"user";
-
+#define SELECTEDCATEGORY self.categories[[self.categroyTableView indexPathForSelectedRow].row]
 
 @interface MapleRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
 /**
@@ -57,6 +58,8 @@ static NSString* const MAPLEUser= @"user";
     [self.categroyTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MapleRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:MAPLECategroy];
     [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MapleRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:MAPLEUser];
     
+    [self refreshTableView:self.userTableView];
+    
     //Scroll 自动调整设置
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.categroyTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
@@ -85,15 +88,50 @@ static NSString* const MAPLEUser= @"user";
 }
 
 
+- (void)refreshTableView:(UITableView *)tableView {
+    tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRereshing)];
+}
 
+- (void)footerRereshing {
+    //网络请求延时调试
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        param[@"a"] = @"list";
+        param[@"c"] = @"subscribe";
+        param[@"category_id"] = SELECTEDCATEGORY.id;
+        param[@"page"] = @(++SELECTEDCATEGORY.currentPage);
+        [SVProgressHUD show];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+        [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [SVProgressHUD dismiss];
+            DebugLog(@"%@",responseObject);
+            //users 数据存入对应的 category ，避免重复加载
+            [SELECTEDCATEGORY.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+            [self.userTableView reloadData];
+            //上拉刷新 footer 状态控制
+            SELECTEDCATEGORY.total = [responseObject[@"total"] integerValue];
+            if(SELECTEDCATEGORY.users.count < SELECTEDCATEGORY.total){
+                [self.userTableView.mj_footer endRefreshing];
+            }else{
+                [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD showErrorWithStatus:@"加载失败！"];
+            DebugLog(@"%@",error);
+        }];
+    });
+}
 
 #pragma UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(tableView == self.categroyTableView)
         return self.categories.count;
     else{
-        ;
-        return self.categories[[self.categroyTableView indexPathForSelectedRow].row].users.count;
+        self.userTableView.mj_footer.hidden = SELECTEDCATEGORY.users.count == 0;
+        return SELECTEDCATEGORY.users.count;
     }
 }
 
@@ -106,7 +144,7 @@ static NSString* const MAPLEUser= @"user";
         return categoryCell;
     }else{
         MapleRecommendUserCell *userCell = [self.userTableView dequeueReusableCellWithIdentifier:MAPLEUser];
-        userCell.user = self.categories[[self.categroyTableView indexPathForSelectedRow].row].users[indexPath.row];
+        userCell.user = SELECTEDCATEGORY.users[indexPath.row];
         return userCell;
     }
 }
@@ -116,7 +154,7 @@ static NSString* const MAPLEUser= @"user";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(tableView == self.categroyTableView){
         
-        if(self.categories[indexPath.row].users.count == 0){
+        if(SELECTEDCATEGORY.users.count == 0){
            //重新刷新user表格，马上显示 category 的当前数据,避免数据滞留问题
             [self.userTableView reloadData];
             //网络请求延时调试
@@ -126,16 +164,24 @@ static NSString* const MAPLEUser= @"user";
                 NSMutableDictionary *param = [NSMutableDictionary dictionary];
                 param[@"a"] = @"list";
                 param[@"c"] = @"subscribe";
-                param[@"category_id"] = self.categories[indexPath.row].id;
+                param[@"category_id"] = SELECTEDCATEGORY.id;
+                //当前页初始为0 先加再处理
+                param[@"page"] = @(++SELECTEDCATEGORY.currentPage);
                 [SVProgressHUD show];
                 [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
                 [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     [SVProgressHUD dismiss];
                     DebugLog(@"%@",responseObject);
                     //users 数据存入对应的 category ，避免重复加载
-                    [self.categories[indexPath.row].users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+                    [SELECTEDCATEGORY.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
                     [self.userTableView reloadData];
-                    
+                    //上拉刷新 footer 状态控制
+                    SELECTEDCATEGORY.total = [responseObject[@"total"] integerValue];
+                    if(SELECTEDCATEGORY.users.count < SELECTEDCATEGORY.total){
+                        [self.userTableView.mj_footer endRefreshing];
+                    }else{
+                        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+                    }
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     [SVProgressHUD showErrorWithStatus:@"加载失败！"];
                     DebugLog(@"%@",error);

@@ -31,4 +31,14 @@
  */
 @property (nonatomic, strong) NSMutableArray *users;
 
+/**
+ *  total
+ */
+@property (nonatomic, assign) NSInteger total;
+
+/**
+ *  currentPage
+ */
+@property (nonatomic, assign) NSInteger currentPage;
+
 @end

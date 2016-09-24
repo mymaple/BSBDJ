@@ -34,6 +34,7 @@
 		D878331B1D963B7200CC7F93 /* MaplePublishTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */; };
 		D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833041D963B7200CC7F93 /* AppDelegate.m */; };
 		D878331D1D963B7200CC7F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833051D963B7200CC7F93 /* main.m */; };
+		D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D878331E1D9669DE00CC7F93 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		D87833041D963B7200CC7F93 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D87833051D963B7200CC7F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D87833061D963B7200CC7F93 /* MaplePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePrefixHeader.pch; sourceTree = "<group>"; };
+		D878331E1D9669DE00CC7F93 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E93B7DD4773EE6AD696C2281 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +192,7 @@
 			children = (
 				D840B31B1D915AC2000E8C0E /* Assets.xcassets */,
 				D840B3201D915AC2000E8C0E /* Info.plist */,
+				D878331E1D9669DE00CC7F93 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -480,7 +483,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = D840B3031D915AC1000E8C0E;
@@ -501,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D878330B1D963B7200CC7F93 /* MapleRecommendViewController.xib in Resources */,
+				D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */,
 				D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */,
 				D878330F1D963B7200CC7F93 /* MapleRecommendCategoryCell.xib in Resources */,
 				D87833111D963B7200CC7F93 /* MapleRecommendUserCell.xib in Resources */,
