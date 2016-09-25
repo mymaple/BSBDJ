@@ -24,6 +24,7 @@
 #import "MapleRecommendCategoryCell.h"
 #import "MapleRecommendUser.h"
 #import "MapleRecommendUserCell.h"
+#import "MapleAFHTTPTools.h"
 
 
 static NSString* const MAPLECategroy = @"categroy";
@@ -90,19 +91,29 @@ static NSString* const MAPLEUser= @"user";
     param[@"c"] = @"subscribe";
     [SVProgressHUD show];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [SVProgressHUD dismiss];
-        DebugLog(@"%@",responseObject);
+//    [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        [SVProgressHUD dismiss];
+//        DebugLog(@"%@",responseObject);
+//        self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+//        [self.categroyTableView reloadData];
+//        //自动选择首行
+//        [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+//        [self.userTableView.mj_header beginRefreshing];
+////        [self tableView:self.categroyTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        [SVProgressHUD showErrorWithStatus:@"加载失败！"];
+//        DebugLog(@"%@",error);
+//    }];
+    //网络连接方法抽取
+    [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet
+                                    url:UrlMain params:param
+                                success:^(id responseObject) {
         self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.categroyTableView reloadData];
         //自动选择首行
         [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
         [self.userTableView.mj_header beginRefreshing];
-//        [self tableView:self.categroyTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载失败！"];
-        DebugLog(@"%@",error);
-    }];
+    } failure:nil];
 }
 
 #pragma  mark - userTableView上拉下拉刷新
@@ -132,11 +143,41 @@ static NSString* const MAPLEUser= @"user";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [SVProgressHUD show];
 //        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-            
-//            [SVProgressHUD dismiss];
-            DebugLog(@"%@",responseObject);
+//        [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            
+//            
+////            [SVProgressHUD dismiss];
+//            DebugLog(@"%@",responseObject);
+//            //删除之前数据
+//            [category.users removeAllObjects];
+//            //users 数据存入对应的 category ，避免重复加载
+//            [category.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+//            //上拉刷新 footer 状态控制
+//            category.total = [responseObject[@"total"] integerValue];
+//            
+//            //判断是否为当前选中的category_id
+//            NSLog(@"--------%@------%@",param[@"category_id"],category.id);
+//            if(![param[@"category_id"] isEqualToString:category.id]) return;
+//            
+//            [self.userTableView reloadData];
+//            
+//            [self.userTableView.mj_header endRefreshing];
+//            [self checkFooterState];
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            
+//            //判断是否为当前选中的category_id
+//            NSLog(@"--------%@------%@",param[@"category_id"],category.id);
+//            if(![param[@"category_id"] isEqualToString:category.id]) return;
+//            
+//            //失败也需要结束刷新
+//            [self.userTableView.mj_header endRefreshing];
+//            [SVProgressHUD showErrorWithStatus:@"加载失败！"];
+//            DebugLog(@"%@",error);
+//        }];
+        //网络连接方法抽取
+        [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet
+                                        url:UrlMain params:param
+                                    success:^(id responseObject) {
             //删除之前数据
             [category.users removeAllObjects];
             //users 数据存入对应的 category ，避免重复加载
@@ -152,17 +193,14 @@ static NSString* const MAPLEUser= @"user";
             
             [self.userTableView.mj_header endRefreshing];
             [self checkFooterState];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+        } failure:^(NSError *err) {
             //判断是否为当前选中的category_id
             NSLog(@"--------%@------%@",param[@"category_id"],category.id);
             if(![param[@"category_id"] isEqualToString:category.id]) return;
-            
-            [SVProgressHUD showErrorWithStatus:@"加载失败！"];
             //失败也需要结束刷新
             [self.userTableView.mj_header endRefreshing];
-            DebugLog(@"%@",error);
         }];
+        
     });
 }
 
@@ -179,10 +217,39 @@ static NSString* const MAPLEUser= @"user";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [SVProgressHUD show];
 //        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-//            [SVProgressHUD dismiss];
-            DebugLog(@"%@",responseObject);
+//        [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            
+////            [SVProgressHUD dismiss];
+//            DebugLog(@"%@",responseObject);
+//            //users 数据存入对应的 category ，避免重复加载
+//            [category.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+//            
+//            //上拉刷新 footer 状态控制
+//            category.total = [responseObject[@"total"] integerValue];
+//            
+//            //判断是否为当前选中的category_id
+//            NSLog(@"--------%@------%@",param[@"category_id"],category.id);
+//            if(![param[@"category_id"] isEqualToString:category.id]) return;
+//            
+//            
+//            [self.userTableView reloadData];
+//           
+//            [self checkFooterState];
+//            
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            
+//            //判断是否为当前选中的category_id
+//            NSLog(@"--------%@------%@",param[@"category_id"],category.id);
+//            if(![param[@"category_id"] isEqualToString:category.id]) return;
+//            
+//            [self.userTableView.mj_footer endRefreshing];
+//            [SVProgressHUD showErrorWithStatus:@"加载失败！"];
+//            DebugLog(@"%@",error);
+//        }];
+        //网络连接方法抽取
+        [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet
+                                        url:UrlMain params:param
+                                    success:^(id responseObject) {
             //users 数据存入对应的 category ，避免重复加载
             [category.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
             
@@ -195,18 +262,14 @@ static NSString* const MAPLEUser= @"user";
             
             
             [self.userTableView reloadData];
-           
+            
             [self checkFooterState];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+        } failure:^(NSError *err) {
             //判断是否为当前选中的category_id
             NSLog(@"--------%@------%@",param[@"category_id"],category.id);
             if(![param[@"category_id"] isEqualToString:category.id]) return;
             
-            [SVProgressHUD showErrorWithStatus:@"加载失败！"];
             [self.userTableView.mj_footer endRefreshing];
-            DebugLog(@"%@",error);
         }];
     });
 }

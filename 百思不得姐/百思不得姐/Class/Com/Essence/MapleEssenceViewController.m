@@ -8,6 +8,8 @@
 
 #import "MapleEssenceViewController.h"
 
+#import "MapleTagRecommendViewController.h"
+
 @interface MapleEssenceViewController ()
 
 @end
@@ -26,8 +28,8 @@
 - (void)leftClick:(UIButton*)btn {
     DebugLog(@"");
     
-    UIViewController *vc = [[UIViewController alloc]init];
-    vc.view.backgroundColor = [UIColor redColor];
+    MapleTagRecommendViewController *vc = [[MapleTagRecommendViewController alloc]init];
+//    vc.view.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

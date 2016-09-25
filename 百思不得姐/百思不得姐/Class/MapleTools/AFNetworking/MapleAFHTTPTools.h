@@ -13,5 +13,9 @@ typedef NS_ENUM(NSInteger, RequestMethodType){
     RequestMethodTypeGet = 2
 };
 @interface MapleAFHTTPTools : NSObject
-
++ (void)requestWihtMethod:(RequestMethodType)methodType
+                      url:(NSString*)url
+                   params:(NSDictionary*)params
+                  success:(void (^)(id responseObject))success
+                  failure:(void (^)(NSError* err))failure;
 @end

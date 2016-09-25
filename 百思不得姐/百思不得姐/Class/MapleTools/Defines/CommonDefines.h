@@ -98,7 +98,8 @@
 //网络请求地址URL
 #define UrlMainIP                     @"http://192.168.76.115:8080"
 //域名
-#define UrlMain                     [NSString stringWithFormat:@"%@/lbms/mobile/smsAction.do",UrlMainIP]
+//#define UrlMain                     [NSString stringWithFormat:@"%@/lbms/mobile/smsAction.do",UrlMainIP]
+#define UrlMain                       @"http://api.budejie.com/api/api_open.php"
 //路径
 #define UrlRentstatisticstype  [NSString stringWithFormat:@"%@/lbms/mobile/rentstatisticstypeAction.do?operAtt=leasingPicture",UrlMainIP]
 //----------------------网络请求--------------------------

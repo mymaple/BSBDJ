@@ -35,6 +35,8 @@
 		D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833041D963B7200CC7F93 /* AppDelegate.m */; };
 		D878331D1D963B7200CC7F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833051D963B7200CC7F93 /* main.m */; };
 		D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D878331E1D9669DE00CC7F93 /* Localizable.strings */; };
+		D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */; };
+		D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC6501D9804A4006BC864 /* MapleTagRecommendViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		D87833051D963B7200CC7F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D87833061D963B7200CC7F93 /* MaplePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePrefixHeader.pch; sourceTree = "<group>"; };
 		D878331E1D9669DE00CC7F93 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D8FAC64C1D98020B006BC864 /* UITableViewController+MapleSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+MapleSwizzle.h"; sourceTree = "<group>"; };
+		D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+MapleSwizzle.m"; sourceTree = "<group>"; };
+		D8FAC64F1D9804A4006BC864 /* MapleTagRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTagRecommendViewController.h; sourceTree = "<group>"; };
+		D8FAC6501D9804A4006BC864 /* MapleTagRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleTagRecommendViewController.m; sourceTree = "<group>"; };
 		E93B7DD4773EE6AD696C2281 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +248,8 @@
 			children = (
 				D87832CE1D963B7200CC7F93 /* MapleEssenceViewController.h */,
 				D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */,
+				D8FAC64F1D9804A4006BC864 /* MapleTagRecommendViewController.h */,
+				D8FAC6501D9804A4006BC864 /* MapleTagRecommendViewController.m */,
 			);
 			path = Essence;
 			sourceTree = "<group>";
@@ -357,6 +365,8 @@
 			children = (
 				D87832F71D963B7200CC7F93 /* UIViewExt.h */,
 				D87832F81D963B7200CC7F93 /* UIViewExt.m */,
+				D8FAC64C1D98020B006BC864 /* UITableViewController+MapleSwizzle.h */,
+				D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -598,6 +608,8 @@
 				D87833171D963B7200CC7F93 /* BaseViewController.m in Sources */,
 				D87833141D963B7200CC7F93 /* MapleTabBarController.m in Sources */,
 				D878330E1D963B7200CC7F93 /* MapleRecommendCategoryCell.m in Sources */,
+				D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */,
+				D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */,
 				D878330A1D963B7200CC7F93 /* MapleRecommendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
