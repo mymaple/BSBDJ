@@ -38,7 +38,7 @@
 /**
  *  fans_count
  */
-@property (nonatomic, copy) NSString *fans_count;
+@property (nonatomic, assign) NSInteger fans_count;
 
 /**
  *  tiezi_count

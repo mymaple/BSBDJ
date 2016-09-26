@@ -36,7 +36,14 @@
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header]
                             placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.screenNameLabel.text = user.screen_name;
-    self.fansCountLabel.text = user.fans_count;
+//    self.fansCountLabel.text = user.fans_count;
+    
+    //万人显示
+    if(user.fans_count < 10000)
+        self.fansCountLabel.text= [NSString stringWithFormat:@"%zd人关注",user.fans_count];
+    else
+        self.fansCountLabel.text = [NSString stringWithFormat:@"%.1f万人关注",user.fans_count/10000.0];
+    
     self.isFollowBtn.selected = user.is_follow == 1;
 }
 

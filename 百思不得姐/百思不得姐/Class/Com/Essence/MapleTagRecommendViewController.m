@@ -6,86 +6,79 @@
 //  Copyright © 2016年 mymaple. All rights reserved.
 //
 
+
+
+
 #import "MapleTagRecommendViewController.h"
 
+#import <MJExtension/MJExtension.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import "UITableViewController+MapleSwizzle.h"
+#import "MapleAFHTTPTools.h"
+#import "MapleTagRecommend.h"
+#import "MapleTagRecommendTableViewCell.h"
+
+static NSString* const MAPLETAG = @"tag";
 
 @interface MapleTagRecommendViewController ()
+
+/**
+ *  table数据
+ */
+@property (nonatomic, strong) NSArray<MapleTagRecommend*> *tagRecommends;
 
 @end
 
 @implementation MapleTagRecommendViewController
 
+
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
 -(void)configView {
+    //注册 cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MapleTagRecommendTableViewCell class]) bundle:nil] forCellReuseIdentifier:MAPLETAG];
+    
     self.title = @"推荐标签";
     
+    self.tableView.rowHeight = 70;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
+    NSMutableDictionary * param = [NSMutableDictionary dictionary];
+    param[@"a"] = @"tag_recommend";
+    param[@"action"] = @"sub";
+    param[@"c"] =  @"topic";
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet url:UrlMain params:param success:^(id responseObject) {
+        self.tagRecommends = [MapleTagRecommend mj_objectArrayWithKeyValuesArray:responseObject];
+        [self.tableView reloadData];
+        
+        
+    } failure:^(NSError *err) {
+        
+    }];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.tagRecommends.count;
 }
 
-/*
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    MapleTagRecommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MAPLETAG];
     
-    // Configure the cell...
+    cell.tagRecommend = self.tagRecommends[indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
