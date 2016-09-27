@@ -23,6 +23,9 @@
                     </constraints>
                     <state key="normal" title="登录" backgroundImage="loginBtnBg"/>
                     <state key="highlighted" backgroundImage="loginBtnBgClick"/>
+                    <connections>
+                        <action selector="loginAccount:" destination="-1" eventType="touchUpInside" id="dNH-Mh-fhK"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GYX-M1-1Xj">
                     <rect key="frame" x="163" y="205" width="48" height="48"/>
@@ -43,6 +46,9 @@
                     <state key="highlighted" backgroundImage="contributeButtonFrameClick">
                         <color key="titleColor" red="1" green="0.3865034276" blue="0.56811862099999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="registerAccount:" destination="-1" eventType="touchUpInside" id="khc-Ea-sDE"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-fZ-Kbs">
                     <rect key="frame" x="70" y="303" width="235" height="61"/>

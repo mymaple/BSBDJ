@@ -7,7 +7,10 @@
 //
 
 #import "MapleFriendTrendsViewController.h"
+
+
 #import "MapleRecommendViewController.h"
+#import "MapleLoginRegisterViewController.h"
 
 @interface MapleFriendTrendsViewController ()
 
@@ -30,5 +33,14 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+
+- (IBAction)loginAccount:(id)sender {
+    MapleLoginRegisterViewController *vc = [[MapleLoginRegisterViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)registerAccount:(id)sender {
+}
+
 
 @end

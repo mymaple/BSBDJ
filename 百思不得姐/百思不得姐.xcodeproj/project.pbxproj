@@ -35,6 +35,9 @@
 		D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833041D963B7200CC7F93 /* AppDelegate.m */; };
 		D878331D1D963B7200CC7F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87833051D963B7200CC7F93 /* main.m */; };
 		D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D878331E1D9669DE00CC7F93 /* Localizable.strings */; };
+		D8DCF1E41D9983C100CC21E3 /* MapleLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF1E21D9983C100CC21E3 /* MapleLoginRegisterViewController.m */; };
+		D8DCF1E51D9983C100CC21E3 /* MapleLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DCF1E31D9983C100CC21E3 /* MapleLoginRegisterViewController.xib */; };
+		D8DCF1E81D99952600CC21E3 /* MapleVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */; };
 		D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */; };
 		D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC6501D9804A4006BC864 /* MapleTagRecommendViewController.m */; };
 		D8FAC6561D98190C006BC864 /* MapleTagRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC6551D98190C006BC864 /* MapleTagRecommend.m */; };
@@ -115,6 +118,11 @@
 		D87833051D963B7200CC7F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D87833061D963B7200CC7F93 /* MaplePrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePrefixHeader.pch; sourceTree = "<group>"; };
 		D878331E1D9669DE00CC7F93 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D8DCF1E11D9983C100CC21E3 /* MapleLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleLoginRegisterViewController.h; sourceTree = "<group>"; };
+		D8DCF1E21D9983C100CC21E3 /* MapleLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleLoginRegisterViewController.m; sourceTree = "<group>"; };
+		D8DCF1E31D9983C100CC21E3 /* MapleLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		D8DCF1E61D99952600CC21E3 /* MapleVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleVerticalButton.h; sourceTree = "<group>"; };
+		D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleVerticalButton.m; sourceTree = "<group>"; };
 		D8FAC64C1D98020B006BC864 /* UITableViewController+MapleSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+MapleSwizzle.h"; sourceTree = "<group>"; };
 		D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+MapleSwizzle.m"; sourceTree = "<group>"; };
 		D8FAC64F1D9804A4006BC864 /* MapleTagRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTagRecommendViewController.h; sourceTree = "<group>"; };
@@ -283,6 +291,9 @@
 				D87832D51D963B7200CC7F93 /* MapleRecommendViewController.h */,
 				D87832D61D963B7200CC7F93 /* MapleRecommendViewController.m */,
 				D87832D71D963B7200CC7F93 /* MapleRecommendViewController.xib */,
+				D8DCF1E11D9983C100CC21E3 /* MapleLoginRegisterViewController.h */,
+				D8DCF1E21D9983C100CC21E3 /* MapleLoginRegisterViewController.m */,
+				D8DCF1E31D9983C100CC21E3 /* MapleLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,6 +401,8 @@
 				D87832FD1D963B7200CC7F93 /* MapleNavigationController.m */,
 				D87832FE1D963B7200CC7F93 /* MaplePublishTabBar.h */,
 				D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */,
+				D8DCF1E61D99952600CC21E3 /* MapleVerticalButton.h */,
+				D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -542,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D878330B1D963B7200CC7F93 /* MapleRecommendViewController.xib in Resources */,
+				D8DCF1E51D9983C100CC21E3 /* MapleLoginRegisterViewController.xib in Resources */,
 				D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */,
 				D8FAC65B1D981D58006BC864 /* MapleTagRecommendTableViewCell.xib in Resources */,
 				D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */,
@@ -631,6 +645,7 @@
 				D87833081D963B7200CC7F93 /* MapleFriendTrendsViewController.m in Sources */,
 				D878331D1D963B7200CC7F93 /* main.m in Sources */,
 				D8FAC6561D98190C006BC864 /* MapleTagRecommend.m in Sources */,
+				D8DCF1E81D99952600CC21E3 /* MapleVerticalButton.m in Sources */,
 				D87833161D963B7200CC7F93 /* BaseTabBarController.m in Sources */,
 				D87833121D963B7200CC7F93 /* MapleMeViewController.m in Sources */,
 				D87833071D963B7200CC7F93 /* MapleEssenceViewController.m in Sources */,
@@ -641,6 +656,7 @@
 				D87833141D963B7200CC7F93 /* MapleTabBarController.m in Sources */,
 				D878330E1D963B7200CC7F93 /* MapleRecommendCategoryCell.m in Sources */,
 				D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */,
+				D8DCF1E41D9983C100CC21E3 /* MapleLoginRegisterViewController.m in Sources */,
 				D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */,
 				D878330A1D963B7200CC7F93 /* MapleRecommendViewController.m in Sources */,
 			);
