@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef enum{
+    MapleLogin,
+    MapleRegister
+}MapleLoginType;
 
 @interface MapleLoginRegisterViewController : UIViewController
-
+/**
+ *  MapleLoginType
+ */
+@property (nonatomic, assign) MapleLoginType type;
+- (instancetype)initWithType:(MapleLoginType)type;
 @end

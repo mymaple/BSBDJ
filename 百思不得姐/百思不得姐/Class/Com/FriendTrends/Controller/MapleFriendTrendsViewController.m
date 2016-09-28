@@ -40,6 +40,9 @@
 }
 
 - (IBAction)registerAccount:(id)sender {
+    MapleLoginRegisterViewController *vc = [[MapleLoginRegisterViewController alloc]initWithType:MapleRegister];
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 

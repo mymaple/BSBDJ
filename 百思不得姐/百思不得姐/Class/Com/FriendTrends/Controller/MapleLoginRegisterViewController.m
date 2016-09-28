@@ -6,9 +6,22 @@
 //  Copyright © 2016年 mymaple. All rights reserved.
 //
 
+/**
+ *btn 圆角设置
+    1.    //边框圆角
+            self.loginBtn.layer.cornerRadius = 5;
+            //设置 btn 所有layer 都遵循边框
+            self.loginBtn.layer.masksToBounds = YES;
+    2.通过 xib kvc 设置
+ *
+ */
+
+
 #import "MapleLoginRegisterViewController.h"
 
 @interface MapleLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
+@property (weak, nonatomic) IBOutlet UIButton *loginRegisterBtn;
 
 @end
 
@@ -17,12 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if(self.type == MapleRegister)
+        [self registerBtn:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (instancetype)initWithType:(MapleLoginType)type{
+    if(self = [super init]){
+        self.type = type;
+    }
+    return self;
+}
+
+
+
 
 #pragma  mark - 状态栏文字设置
 
@@ -33,6 +60,23 @@
 
 - (IBAction)closeViewController:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)registerBtn:(UIButton*)sender {
+    if(self.loginViewLeftMargin.constant != 0 && sender == self.loginRegisterBtn){
+        self.loginViewLeftMargin.constant = 0;
+        [self.loginRegisterBtn setTitle:@"注册账号" forState:UIControlStateNormal];
+    }else{
+        self.loginViewLeftMargin.constant = -SCREEN_WIDTH;
+        [self.loginRegisterBtn setTitle:@"登录账号" forState:UIControlStateNormal];
+    }
+    if (sender) {
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+    
 }
 
 /*

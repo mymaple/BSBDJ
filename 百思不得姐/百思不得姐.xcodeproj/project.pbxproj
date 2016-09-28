@@ -38,6 +38,7 @@
 		D8DCF1E41D9983C100CC21E3 /* MapleLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF1E21D9983C100CC21E3 /* MapleLoginRegisterViewController.m */; };
 		D8DCF1E51D9983C100CC21E3 /* MapleLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DCF1E31D9983C100CC21E3 /* MapleLoginRegisterViewController.xib */; };
 		D8DCF1E81D99952600CC21E3 /* MapleVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */; };
+		D8EE3C2C1D9AD4E100A8E06E /* MaplePlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE3C2B1D9AD4E100A8E06E /* MaplePlaceholderTextField.m */; };
 		D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */; };
 		D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC6501D9804A4006BC864 /* MapleTagRecommendViewController.m */; };
 		D8FAC6561D98190C006BC864 /* MapleTagRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAC6551D98190C006BC864 /* MapleTagRecommend.m */; };
@@ -123,6 +124,8 @@
 		D8DCF1E31D9983C100CC21E3 /* MapleLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		D8DCF1E61D99952600CC21E3 /* MapleVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleVerticalButton.h; sourceTree = "<group>"; };
 		D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleVerticalButton.m; sourceTree = "<group>"; };
+		D8EE3C2A1D9AD4E100A8E06E /* MaplePlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaplePlaceholderTextField.h; sourceTree = "<group>"; };
+		D8EE3C2B1D9AD4E100A8E06E /* MaplePlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaplePlaceholderTextField.m; sourceTree = "<group>"; };
 		D8FAC64C1D98020B006BC864 /* UITableViewController+MapleSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+MapleSwizzle.h"; sourceTree = "<group>"; };
 		D8FAC64D1D98020B006BC864 /* UITableViewController+MapleSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+MapleSwizzle.m"; sourceTree = "<group>"; };
 		D8FAC64F1D9804A4006BC864 /* MapleTagRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTagRecommendViewController.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				D87832FF1D963B7200CC7F93 /* MaplePublishTabBar.m */,
 				D8DCF1E61D99952600CC21E3 /* MapleVerticalButton.h */,
 				D8DCF1E71D99952600CC21E3 /* MapleVerticalButton.m */,
+				D8EE3C2A1D9AD4E100A8E06E /* MaplePlaceholderTextField.h */,
+				D8EE3C2B1D9AD4E100A8E06E /* MaplePlaceholderTextField.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -655,6 +660,7 @@
 				D87833171D963B7200CC7F93 /* BaseViewController.m in Sources */,
 				D87833141D963B7200CC7F93 /* MapleTabBarController.m in Sources */,
 				D878330E1D963B7200CC7F93 /* MapleRecommendCategoryCell.m in Sources */,
+				D8EE3C2C1D9AD4E100A8E06E /* MaplePlaceholderTextField.m in Sources */,
 				D8FAC64E1D98020B006BC864 /* UITableViewController+MapleSwizzle.m in Sources */,
 				D8DCF1E41D9983C100CC21E3 /* MapleLoginRegisterViewController.m in Sources */,
 				D8FAC6511D9804A4006BC864 /* MapleTagRecommendViewController.m in Sources */,
