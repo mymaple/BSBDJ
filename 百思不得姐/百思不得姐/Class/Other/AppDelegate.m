@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MapleTabBarController.h"
+#import "MaplePushguideView.h"
+
+static NSString* const MAPLEBUNDLEKEY = @"CFBundleShortVersionString";
 
 @interface AppDelegate ()
 
@@ -23,6 +26,10 @@
     MapleTabBarController *vc = [[MapleTabBarController alloc]init];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
+    
+    //显示推送提示
+    [MaplePushguideView showIn:self.window];
+    
     
     return YES;
 }

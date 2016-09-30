@@ -62,14 +62,7 @@ static NSString* const MAPLEUser= @"user";
 
 @implementation MapleRecommendViewController
 
-#pragma  mark - property
 
-- (AFHTTPSessionManager *)mgr{
-    if(!_mgr){
-        _mgr = [AFHTTPSessionManager manager];
-    }
-    return _mgr;
-}
 
 - (void)configView {
     //cell 注册
@@ -85,35 +78,50 @@ static NSString* const MAPLEUser= @"user";
     self.userTableView.rowHeight = 70;
     
     self.title = @"推荐关注";
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"a"] = @"category";
     param[@"c"] = @"subscribe";
     [SVProgressHUD show];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-//    [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        [SVProgressHUD dismiss];
-//        DebugLog(@"%@",responseObject);
-//        self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-//        [self.categroyTableView reloadData];
-//        //自动选择首行
-//        [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-//        [self.userTableView.mj_header beginRefreshing];
-////        [self tableView:self.categroyTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        [SVProgressHUD showErrorWithStatus:@"加载失败！"];
-//        DebugLog(@"%@",error);
-//    }];
+    //    [self.mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    //        [SVProgressHUD dismiss];
+    //        DebugLog(@"%@",responseObject);
+    //        self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+    //        [self.categroyTableView reloadData];
+    //        //自动选择首行
+    //        [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+    //        [self.userTableView.mj_header beginRefreshing];
+    ////        [self tableView:self.categroyTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    //        [SVProgressHUD showErrorWithStatus:@"加载失败！"];
+    //        DebugLog(@"%@",error);
+    //    }];
     //网络连接方法抽取
     [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet
                                     url:UrlMain params:param
                                 success:^(id responseObject) {
-        self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        [self.categroyTableView reloadData];
-        //自动选择首行
-        [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-        [self.userTableView.mj_header beginRefreshing];
-    } failure:nil];
+                                    self.categories = [MapleRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                                    [self.categroyTableView reloadData];
+                                    //自动选择首行
+                                    [self.categroyTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+                                    [self.userTableView.mj_header beginRefreshing];
+                                } failure:nil];
+
+}
+
+#pragma  mark - property
+
+- (AFHTTPSessionManager *)mgr{
+    if(!_mgr){
+        _mgr = [AFHTTPSessionManager manager];
+    }
+    return _mgr;
 }
 
 #pragma  mark - userTableView上拉下拉刷新

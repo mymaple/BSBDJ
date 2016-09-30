@@ -20,6 +20,10 @@
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
 
+#define VIEW_WIDTH  (self.view.frame.size.width)
+#define VIEW_HEIGHT (self.view.frame.size.height)
+#define VIEW_BOUNDS (self.view.bounds)
+
 //-------------------获取设备大小-------------------------
 
 
