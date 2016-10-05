@@ -137,16 +137,15 @@ static NSString* const MAPLEUser= @"user";
     
     //保持 category一致，防止异步请求category错乱
     MapleRecommendCategory *category = SELECTEDCATEGORY;
-    category.currentPage = 0;
     
-    
+    NSInteger page = 1;
 //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"a"] = @"list";
     param[@"c"] = @"subscribe";
     param[@"category_id"] = category.id;
     //当前页初始为0 先加再处理
-    param[@"page"] = @(++category.currentPage);
+    param[@"page"] = @(page);
     //网络请求延时调试，传参不延时！！！！！！
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [SVProgressHUD show];
@@ -186,6 +185,9 @@ static NSString* const MAPLEUser= @"user";
         [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet
                                         url:UrlMain params:param
                                     success:^(id responseObject) {
+                                        
+            //重置页码
+            category.currentPage = page;
             //删除之前数据
             [category.users removeAllObjects];
             //users 数据存入对应的 category ，避免重复加载
@@ -220,7 +222,10 @@ static NSString* const MAPLEUser= @"user";
     param[@"a"] = @"list";
     param[@"c"] = @"subscribe";
     param[@"category_id"] = category.id;
-    param[@"page"] = @(++category.currentPage);
+    
+    
+    NSInteger page = category.currentPage + 1;
+    param[@"page"] = @(page);
     //网络请求延时调试，传参不延时！！！！！！
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [SVProgressHUD show];
@@ -260,7 +265,9 @@ static NSString* const MAPLEUser= @"user";
                                     success:^(id responseObject) {
             //users 数据存入对应的 category ，避免重复加载
             [category.users addObjectsFromArray:[MapleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
-            
+                                        
+                                        
+            category.currentPage = page;
             //上拉刷新 footer 状态控制
             category.total = [responseObject[@"total"] integerValue];
             
@@ -276,7 +283,6 @@ static NSString* const MAPLEUser= @"user";
             //判断是否为当前选中的category_id
             NSLog(@"--------%@------%@",param[@"category_id"],category.id);
             if(![param[@"category_id"] isEqualToString:category.id]) return;
-            
             [self.userTableView.mj_footer endRefreshing];
         }];
     });

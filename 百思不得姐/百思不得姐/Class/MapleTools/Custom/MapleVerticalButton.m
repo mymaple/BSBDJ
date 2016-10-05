@@ -38,14 +38,14 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     //
-    self.imageView.top = 0;
-    self.imageView.left = 0;
-    self.imageView.width = self.width;
-    self.imageView.height = self.width;
+    self.imageView.mp_top = 0;
+    self.imageView.mp_left = 0;
+    self.imageView.mp_width = self.mp_width;
+    self.imageView.mp_height = self.mp_width;
     //
-    self.titleLabel.bottom = self.height;
-    self.titleLabel.left = 0;
-    self.titleLabel.width = self.width;
+    self.titleLabel.mp_bottom = self.mp_height;
+    self.titleLabel.mp_left = 0;
+    self.titleLabel.mp_width = self.mp_width;
 //    self.titleLabel.height = self.height - self.width;
 }
 @end

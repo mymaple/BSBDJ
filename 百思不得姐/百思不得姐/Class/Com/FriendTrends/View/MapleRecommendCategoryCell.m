@@ -50,8 +50,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.textLabel.top = 2;
-    self.textLabel.height = self.contentView.height - 2*self.textLabel.top;
+    self.textLabel.mp_top = 2;
+    self.textLabel.mp_height = self.contentView.mp_height - 2*self.textLabel.mp_top;
     
 }
 

@@ -45,12 +45,13 @@
     
     [self configContentScrollView];
     
-    
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+    NSArray *essenceTypes = @[@1,@41,@31,@10,@29];
     for (NSInteger i = 0; i < self.titleView.subviews.count; i++) {
-        MapleEsssnceTableViewController *vc1 = [[MapleEsssnceTableViewController alloc]init];
-        vc1.tableView.backgroundColor = [UIColor colorWithRed:arc4random() % 2 green:arc4random()% 2 blue:arc4random() % 2 alpha:1];
-        vc1.essenceType = i;
-        [self addChildViewController:vc1];
+        MapleEsssnceTableViewController *vc = [[MapleEsssnceTableViewController alloc]init];
+//        vc1.tableView.backgroundColor = [UIColor colorWithRed:arc4random() % 2 green:arc4random()% 2 blue:arc4random() % 2 alpha:1];
+        vc.type = essenceTypes[i];
+        [self addChildViewController:vc];
     }
     [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
 }
@@ -71,21 +72,21 @@
  *  标题栏
  */
 - (void)configTitleView {
-    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.width, 35)];
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.mp_width, 35)];
     /**
      *  颜色透明度设置方法
             1.RGBA(r, g, b, a);
             2.[[UIColor whiteColor]colorWithAlphaComponent:0.5];
             3.[UIColor colorWithWhite:1.0 alpha:0.5];
      */
-    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     [self.view addSubview:titleView];
     self.titleView = titleView;
     
-    CGFloat btnW = titleView.width /5;
+    CGFloat btnW = titleView.mp_width /5;
     
     UIView *markView = [[UIView alloc]init];
-    markView.frame = CGRectMake(0, titleView.bottom, 0, 5);
+    markView.frame = CGRectMake(0, titleView.mp_bottom - 5, 0, 5);
     markView.backgroundColor = [UIColor redColor];
     [self.view addSubview:markView];
     self.markView = markView;
@@ -94,7 +95,7 @@
     NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     for (NSInteger i = 0; i < titles.count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(btnW*i, 0, btnW, titleView.height);
+        btn.frame = CGRectMake(btnW*i, 0, btnW, titleView.mp_height);
         btn.tag = i;
         
         btn.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -105,8 +106,8 @@
         [titleView addSubview:btn];
         if (i==0) {
             [btn layoutIfNeeded];//[btn sizeToFit];
-            self.markView.width = btn.titleLabel.width;
-            self.markView.centerX = btn.centerX;
+            self.markView.mp_width = btn.titleLabel.mp_width;
+            self.markView.mp_centerX = btn.mp_centerX;
             btn.enabled = NO;
             self.btnSelected = btn;
         }
@@ -118,8 +119,8 @@
     if (btn != self.btnSelected){
         [UIView animateWithDuration:0.25 animations:^{
             //mark 移动
-            self.markView.width = btn.titleLabel.width;
-            self.markView.centerX = btn.centerX;
+            self.markView.mp_width = btn.titleLabel.mp_width;
+            self.markView.mp_centerX = btn.mp_centerX;
             //btn状态
             self.btnSelected.enabled = YES;
             btn.enabled = NO;
@@ -143,7 +144,7 @@
 //    //设置内边距
 //    contentScrollView.contentInset = UIEdgeInsetsMake(self.titleView.bottom, 0, self.tabBarController.tabBar.top, VIEW_WIDTH);
     
-    contentScrollView.backgroundColor = [UIColor redColor];
+//    contentScrollView.backgroundColor = [UIColor redColor];
     
     
     contentScrollView.delegate = self;
@@ -172,14 +173,10 @@
 
     //去除状态栏影响y=20 and SCREEN_HEIGHT - h =20
     vc.view.frame = self.view.frame;
-    vc.view.left = scrollView.contentOffset.x;
-    DebugLog(@"%@",NSStringFromCGRect(self.view.frame));
+    vc.view.mp_left = scrollView.contentOffset.x;
+//    DebugLog(@"%@",NSStringFromCGRect(self.view.frame))
     
-    //设置 tableview 内边距
-    vc.tableView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(self.markView.frame), 0, self.tabBarController.tabBar.height, 0);
     
-    //设置滚动条内边距
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
     
     [self.contentScrollView addSubview:vc.view];
 }

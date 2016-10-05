@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef enum{
-    EssenceTypeAll,
-    EssenceTypeviode,
-    EssenceTypeSound,
-    EssenceTypePicture,
-    EssenceTypeWord
-}EssenceType;
+
+
+
 @interface MapleEsssnceTableViewController : UITableViewController
+
 /**
- *  essenceType
+ *  EssenceType
  */
-@property (nonatomic, assign) EssenceType essenceType;
+@property (nonatomic, assign) NSNumber *type;
 @end

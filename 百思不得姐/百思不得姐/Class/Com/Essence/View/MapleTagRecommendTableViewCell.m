@@ -8,7 +8,7 @@
 
 #import "MapleTagRecommendTableViewCell.h"
 
-#import "UIImageView+WebCache.m"
+#import "UIImageView+WebCache.h"
 
 
 #import "MapleTagRecommend.h"

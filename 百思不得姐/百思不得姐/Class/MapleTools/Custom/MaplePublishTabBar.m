@@ -8,6 +8,8 @@
 
 #import "MaplePublishTabBar.h"
 
+#import "MaplePublishViewController.h"
+
 @interface MaplePublishTabBar()
 /**
  *  publishBtn
@@ -25,6 +27,8 @@
         UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
+        
+        [publishBtn addTarget:self action:@selector(clickPublish) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishBtn];
         self.publishBtn = publishBtn;
         
@@ -32,16 +36,22 @@
     return self;
 }
 
+- (void)clickPublish {
+    MaplePublishViewController *vc = [[MaplePublishViewController alloc]init];
+    [APPLICATION.keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
+}
+
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
 //    self.publishBtn.bounds = CGRectMake(0, 0, self.publishBtn.currentBackgroundImage.size.width, self.publishBtn.currentBackgroundImage.size.height);
     [self.publishBtn sizeToFit];
-    self.publishBtn.center = CGPointMake(self.width*0.5, self.height*0.5);
+    self.publishBtn.center = CGPointMake(self.mp_width*0.5, self.mp_height*0.5);
     
     NSInteger count = self.items.count;
-    CGFloat btnH = self.height;
-    CGFloat btnW = self.width / (count+1);
+    CGFloat btnH = self.mp_height;
+    CGFloat btnW = self.mp_width / (count+1);
     NSInteger index = 0;
     for (UIView *btn in self.subviews) {
         if(![btn isKindOfClass:NSClassFromString(@"UITabBarButton")]) continue;

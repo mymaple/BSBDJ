@@ -26,26 +26,25 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 @implementation UIView (ViewGeometry)
 
 // Retrieve and set the origin
-- (CGPoint) origin
+- (CGPoint) mp_origin
 {
 	return self.frame.origin;
 }
 
-- (void) setOrigin: (CGPoint) aPoint
-{
-	CGRect newframe = self.frame;
-	newframe.origin = aPoint;
-	self.frame = newframe;
+-(void)setMp_origin:(CGPoint)mp_origin {
+    CGRect newframe = self.frame;
+    newframe.origin = mp_origin;
+    self.frame = newframe;
 }
 
 
 // Retrieve and set the size
-- (CGSize) size
+- (CGSize) mp_size
 {
 	return self.frame.size;
 }
 
-- (void) setSize: (CGSize) aSize
+- (void) setMp_size: (CGSize) aSize
 {
 	CGRect newframe = self.frame;
 	newframe.size = aSize;
@@ -53,21 +52,21 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 }
 
 // Query other frame locations
-- (CGPoint) bottomRight
+- (CGPoint) mp_bottomRight
 {
 	CGFloat x = self.frame.origin.x + self.frame.size.width;
 	CGFloat y = self.frame.origin.y + self.frame.size.height;
 	return CGPointMake(x, y);
 }
 
-- (CGPoint) bottomLeft
+- (CGPoint) mp_bottomLeft
 {
 	CGFloat x = self.frame.origin.x;
 	CGFloat y = self.frame.origin.y + self.frame.size.height;
 	return CGPointMake(x, y);
 }
 
-- (CGPoint) topRight
+- (CGPoint) mp_topRight
 {
 	CGFloat x = self.frame.origin.x + self.frame.size.width;
 	CGFloat y = self.frame.origin.y;
@@ -76,102 +75,106 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 
 
 // Retrieve and set height, width, top, bottom, left, right
-- (CGFloat) height
+- (CGFloat) mp_height
 {
 	return self.frame.size.height;
 }
 
-- (void) setHeight: (CGFloat) newheight
+- (void)setMp_height:(CGFloat)mp_height
 {
 	CGRect newframe = self.frame;
-	newframe.size.height = newheight;
+	newframe.size.height = mp_height;
 	self.frame = newframe;
 }
 
-- (CGFloat) width
+- (CGFloat)mp_width
 {
 	return self.frame.size.width;
 }
 
-- (void) setWidth: (CGFloat) newwidth
+- (void)setMp_width:(CGFloat)mp_width
 {
 	CGRect newframe = self.frame;
-	newframe.size.width = newwidth;
+	newframe.size.width = mp_width;
 	self.frame = newframe;
 }
 
-- (CGFloat) top
+- (CGFloat)mp_top
 {
 	return self.frame.origin.y;
 }
 
-- (void) setTop: (CGFloat) newtop
+- (void)setMp_top:(CGFloat)mp_top
 {
 	CGRect newframe = self.frame;
-	newframe.origin.y = newtop;
+	newframe.origin.y = mp_top;
 	self.frame = newframe;
 }
 
-- (CGFloat) left
+- (CGFloat)mp_left
 {
 	return self.frame.origin.x;
 }
 
-- (void) setLeft: (CGFloat) newleft
+-(void)setMp_left:(CGFloat)mp_left
 {
 	CGRect newframe = self.frame;
-	newframe.origin.x = newleft;
+	newframe.origin.x = mp_left;
 	self.frame = newframe;
 }
 
-- (CGFloat) bottom
+- (CGFloat)mp_bottom
 {
 	return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void) setBottom: (CGFloat) newbottom
+- (void)setMp_bottom:(CGFloat)mp_bottom
 {
 	CGRect newframe = self.frame;
-	newframe.origin.y = newbottom - self.frame.size.height;
+	newframe.origin.y = mp_bottom - self.frame.size.height;
 	self.frame = newframe;
 }
 
-- (CGFloat) right
+- (CGFloat)mp_right
 {
 	return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void) setRight: (CGFloat) newright
+- (void)setMp_right:(CGFloat)mp_right
 {
-	CGFloat delta = newright - (self.frame.origin.x + self.frame.size.width);
+	CGFloat delta = mp_right - (self.frame.origin.x + self.frame.size.width);
 	CGRect newframe = self.frame;
 	newframe.origin.x += delta ;
 	self.frame = newframe;
 }
 
-- (CGFloat)centerX {
+- (CGFloat)mp_centerX
+{
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX {
+-(void)setMp_centerX:(CGFloat)mp_centerX
+{
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = mp_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerY {
+- (CGFloat)mp_centerY
+{
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY {
+- (void)setMp_centerY:(CGFloat)mp_centerY
+{
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = mp_centerY;
     self.center = center;
 }
 
 
 // Move via offset
-- (void) moveBy: (CGPoint) delta
+- (void) mp_moveBy: (CGPoint) delta
 {
 	CGPoint newcenter = self.center;
 	newcenter.x += delta.x;
@@ -180,7 +183,7 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 }
 
 // Scaling
-- (void) scaleBy: (CGFloat) scaleFactor
+- (void) mp_scaleBy: (CGFloat) scaleFactor
 {
 	CGRect newframe = self.frame;
 	newframe.size.width *= scaleFactor;
@@ -189,7 +192,7 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 }
 
 // Ensure that both dimensions fit within the given size by scaling down
-- (void) fitInSize: (CGSize) aSize
+- (void) mp_fitInSize: (CGSize) aSize
 {
 	CGFloat scale;
 	CGRect newframe = self.frame;

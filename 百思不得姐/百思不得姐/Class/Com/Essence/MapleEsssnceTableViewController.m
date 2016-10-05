@@ -7,10 +7,32 @@
 //
 
 #import "MapleEsssnceTableViewController.h"
+
+#import "MJExtension.h"
+#import "MJRefresh.h"
+
 #import "UITableViewController+MapleSwizzle.h"
 #import "MapleAFHTTPTools.h"
 
-@interface MapleEsssnceTableViewController ()
+#import "MapleEssenceTableViewCell.h"
+#import "MapleEssence.h"
+
+static NSString* const MPEssence = @"Essence";
+@interface MapleEsssnceTableViewController()
+/**
+ *  essnces
+ */
+@property (nonatomic, strong) NSMutableArray<MapleEssence*> *essnces;
+
+/**
+ *  maxtime
+ */
+@property (nonatomic, copy) NSString *maxtime;
+
+/**
+ *  param
+ */
+@property (nonatomic, strong) NSDictionary *param;
 
 @end
 
@@ -18,43 +40,120 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor clearColor];
+    [self configTableView];
+    [self refreshTableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadData];
+    [self.tableView.mj_header beginRefreshing];
 }
 
+
+-(void)configTableView {
+    //注册 cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MapleEssenceTableViewCell class]) bundle:nil]  forCellReuseIdentifier:MPEssence];
+    
+    //设置 tableview 内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(MPNavB + MPTitleViewH, 0, MPTabH, 0);
+    
+    //设置滚动条内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    //无分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //背景色
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
+#pragma  mark - refreshTableView
+- (void)refreshTableView {
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
+    //自动改变标签透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefresh)];
+    //or use back normal
+}
 
 #pragma  mark - loadData
-- (void)loadData {
+- (void)headerRefresh {
+
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"a"] = @"list";
+    param[@"c"] = @"data";
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+    param[@"type"] = self.type;
+    self.param = param;
+
+    [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet url:UrlMain params:param success:^(id responseObject) {
+        
+        if(self.param != param) return;
+        
+        DebugLog(@"%@",responseObject);
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        self.essnces = [MapleEssence mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    } failure:^(NSError *err) {
+        if(self.param != param) return;
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
+
+- (void)footerRefresh {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"a"] = @"list";
+    param[@"c"] = @"data";
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+    param[@"type"] = self.type;
+    param[@"maxtime"] = self.maxtime;
     
+    self.param = param;
+    
+    [MapleAFHTTPTools requestWihtMethod:RequestMethodTypeGet url:UrlMain params:param success:^(id responseObject) {
+        
+        if(self.param != param) return;
+        
+        DebugLog(@"%@",responseObject);
+        
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        [self.essnces addObjectsFromArray:[MapleEssence mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+    } failure:^(NSError *err) {
+        if(self.param != param) return;
+        [self.tableView.mj_footer endRefreshing];
+    }];
 }
 
 
 
 
-
-
-#pragma mark - Table view data source
-
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 50;
+    
+    return self.essnces.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    MapleEssenceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MPEssence];
+    cell.essence = self.essnces[indexPath.row];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"cell%zd----%zd",self.essenceType,indexPath.row];
+
     return cell;
 }
+
+#pragma  mark - UITableViewDelegate
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.essnces[indexPath.row].cellHeight;
+}
+
+
+
 
 /**
  *  状态栏隐藏
