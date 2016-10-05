@@ -32,7 +32,7 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height ;
         _cellHeight += textH + MPMargin;
         
-        if (self.type == EssenceTypePicture) {
+        if (self.type == EssenceTypePicture || self.type == EssenceTypeSound || self.type == EssenceTypeViode) {
             CGFloat pictureW = maxSize.width;
             CGFloat pictureH = pictureW / self.width * self.height;
             _seeBigBtnHide = YES;
@@ -40,8 +40,6 @@
                 pictureH = MPPictureREH;
                 _seeBigBtnHide = NO;
             }
-            
-            
             _pictureF = CGRectMake(MPMargin,_cellHeight, pictureW, pictureH);
             
             _cellHeight += pictureH + MPMargin;

@@ -43,11 +43,12 @@ static NSString* const MPEssence = @"Essence";
     self.view.backgroundColor = [UIColor clearColor];
     [self configTableView];
     [self refreshTableView];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 

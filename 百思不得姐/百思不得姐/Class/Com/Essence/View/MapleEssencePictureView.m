@@ -22,6 +22,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *seeBigBtn;
 @property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
+@property (weak, nonatomic) IBOutlet UILabel *playfcountLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *voiceBtn;
+@property (weak, nonatomic) IBOutlet UIButton *videoBtn;
+
 @end
 
 @implementation MapleEssencePictureView
@@ -85,16 +91,37 @@
     }];
     
     
-    self.seeBigBtn.hidden = essence.seeBigBtnHide;
-    
-    
-    
-    //判断后缀名 也可通过图片数据第一个字节判断，图片类型
-    NSString *extension = essence.large_image.pathExtension;
-    self.gifView.hidden = ![extension isEqualToString:@"gif"];
+    self.seeBigBtn.hidden = essence.type != EssenceTypePicture;
+    self.gifView.hidden = essence.type != EssenceTypePicture;
+    self.videoBtn.hidden = essence.type != EssenceTypeViode;
+    self.playfcountLabel.hidden = essence.type != EssenceTypeSound && essence.type != EssenceTypeViode;
+    self.voicetimeLabel.hidden = essence.type != EssenceTypeSound && essence.type != EssenceTypeViode;
+    self.voiceBtn.hidden = essence.type != EssenceTypeSound;
+
+    if (essence.type == EssenceTypePicture ) {
+        self.seeBigBtn.hidden = essence.seeBigBtnHide;
+        //判断后缀名 也可通过图片数据第一个字节判断，图片类型
+        NSString *extension = essence.large_image.pathExtension;
+        self.gifView.hidden = ![extension isEqualToString:@"gif"];
+        
+    }else if(essence.type == EssenceTypeSound ) {
+        self.playfcountLabel.text = [self toString:essence.playfcount withPlaceholder:@"暂无点播"];
+        self.voicetimeLabel.text = [NSString stringWithFormat:@"%2zd:%2zd",essence.voicetime/60,essence.voicetime%60];
+    }else if(essence.type == EssenceTypeViode ) {
+        self.playfcountLabel.text = [self toString:essence.playfcount withPlaceholder:@"暂无点播"];
+        self.voicetimeLabel.text = [NSString stringWithFormat:@"%2zd:%2zd",essence.videotime/60,essence.videotime%60];
+    }
 }
 
-
+- (NSString*)toString:(NSInteger)integer withPlaceholder:(NSString*)placeholder{
+    //万人显示
+    if(integer == 0)
+        return placeholder;
+    else if(integer < 10000)
+        return [NSString stringWithFormat:@"%zd点播",integer];
+    else
+        return [NSString stringWithFormat:@"%.1f万点播",integer/10000.0];
+}
 
 
 @end

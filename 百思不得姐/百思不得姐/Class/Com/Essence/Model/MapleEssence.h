@@ -93,6 +93,22 @@
 @property (nonatomic, assign) CGFloat height;
 
 
+/**
+ *  playfcount
+ */
+@property (nonatomic, assign) NSInteger playfcount;
+
+
+/**
+ *  voicetime
+ */
+@property (nonatomic, assign) NSInteger voicetime;
+
+/**
+ *  videotime
+ */
+@property (nonatomic, assign) NSInteger videotime;
+
 
 //辅助属性
 

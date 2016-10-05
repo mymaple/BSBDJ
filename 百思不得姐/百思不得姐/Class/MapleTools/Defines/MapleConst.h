@@ -18,7 +18,7 @@ UIKIT_EXTERN CGFloat const MPMargin;
  */
 typedef enum{
     EssenceTypeAll = 1,
-    EssenceTypeviode = 41,
+    EssenceTypeViode = 41,
     EssenceTypeSound = 31,
     EssenceTypePicture = 10,
     EssenceTypeWord = 29

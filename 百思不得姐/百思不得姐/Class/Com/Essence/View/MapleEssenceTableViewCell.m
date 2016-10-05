@@ -88,7 +88,10 @@
     [self.shareBtn setTitle:[self toString:essence.repost withPlaceholder:@"转发"] forState:UIControlStateNormal];
     [self.commentBtn setTitle:[self toString:essence.comment withPlaceholder:@"评论"] forState:UIControlStateNormal];
     
-    if (essence.type == EssenceTypePicture) {
+    self.pictureView.hidden = YES;
+    
+    if (essence.type == EssenceTypePicture || essence.type == EssenceTypeSound || essence.type == EssenceTypeViode) {
+        self.pictureView.hidden = NO;
         self.pictureView.frame = essence.pictureF;
         self.pictureView.essence = essence;
     }

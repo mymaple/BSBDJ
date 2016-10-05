@@ -77,7 +77,6 @@
         [SVProgressHUD showErrorWithStatus:@"图片未下载完毕"];
         return;
     }
-    
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 

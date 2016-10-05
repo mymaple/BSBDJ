@@ -36,7 +36,7 @@
                         <constraint firstAttribute="width" constant="31" id="Z7B-j0-HK6"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-ZL-bca">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-ZL-bca">
                     <rect key="frame" x="0.0" y="257" width="300" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="Cpb-ez-ma2"/>
@@ -45,20 +45,59 @@
                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfm-Ke-vwC">
+                    <rect key="frame" x="10" y="273" width="35.5" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTf-Xu-Wd0">
+                    <rect key="frame" x="254.5" y="273" width="35.5" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ks-uQ-YnF">
+                    <rect key="frame" x="118" y="118" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="4cn-YA-aT6"/>
+                        <constraint firstAttribute="width" constant="63" id="DuG-IS-aNg"/>
+                    </constraints>
+                    <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <state key="selected" image="playButtonPause" backgroundImage="playButtonClick"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loX-db-BID">
+                    <rect key="frame" x="114" y="114" width="71" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="71" id="FbW-xp-6vj"/>
+                        <constraint firstAttribute="width" constant="71" id="gZT-Pg-spW"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="video-play"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="FIG-ZM-ga2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="267-Ez-YKA"/>
                 <constraint firstItem="V4X-8s-6rr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AoS-aE-FGn"/>
+                <constraint firstAttribute="bottom" secondItem="kfm-Ke-vwC" secondAttribute="bottom" constant="10" id="Dpu-zE-HIX"/>
                 <constraint firstAttribute="trailing" secondItem="BiI-YJ-cAa" secondAttribute="trailing" id="EVl-H0-q3c"/>
                 <constraint firstAttribute="bottom" secondItem="ejn-ZL-bca" secondAttribute="bottom" id="Edy-xp-Scp"/>
+                <constraint firstItem="loX-db-BID" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="I85-F4-3O5"/>
                 <constraint firstItem="ejn-ZL-bca" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kaq-2R-ahr"/>
+                <constraint firstAttribute="bottom" secondItem="wTf-Xu-Wd0" secondAttribute="bottom" constant="10" id="MCf-WQ-Vgc"/>
+                <constraint firstItem="4ks-uQ-YnF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Mh5-iv-EKw"/>
+                <constraint firstItem="kfm-Ke-vwC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="R6I-L4-uXa"/>
                 <constraint firstItem="1sM-M1-c2f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="U4X-Xo-jPM"/>
+                <constraint firstItem="loX-db-BID" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UTK-Pi-YOZ"/>
                 <constraint firstItem="V4X-8s-6rr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bhl-Rc-Ex0"/>
                 <constraint firstItem="1sM-M1-c2f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="eLR-dw-d3D"/>
                 <constraint firstItem="BiI-YJ-cAa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fhb-Ue-29a"/>
                 <constraint firstItem="BiI-YJ-cAa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jeA-Yo-q5z"/>
                 <constraint firstAttribute="trailing" secondItem="1sM-M1-c2f" secondAttribute="trailing" id="oPa-MS-gQX"/>
+                <constraint firstItem="4ks-uQ-YnF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="p6U-SO-gak"/>
+                <constraint firstAttribute="trailing" secondItem="wTf-Xu-Wd0" secondAttribute="trailing" constant="10" id="pko-QJ-d7e"/>
                 <constraint firstAttribute="trailing" secondItem="ejn-ZL-bca" secondAttribute="trailing" id="q95-1S-R3P"/>
                 <constraint firstAttribute="bottom" secondItem="BiI-YJ-cAa" secondAttribute="bottom" id="whv-cC-dWN"/>
                 <constraint firstItem="FIG-ZM-ga2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yT3-6I-zZP"/>
@@ -68,15 +107,24 @@
             <connections>
                 <outlet property="gifView" destination="V4X-8s-6rr" id="yfM-xG-mWt"/>
                 <outlet property="imageView" destination="BiI-YJ-cAa" id="nnD-mT-H5l"/>
+                <outlet property="playfcountLabel" destination="kfm-Ke-vwC" id="m4p-m6-lWT"/>
                 <outlet property="progressView" destination="FIG-ZM-ga2" id="HLg-55-ZD3"/>
                 <outlet property="seeBigBtn" destination="ejn-ZL-bca" id="XBW-24-yt3"/>
+                <outlet property="videoBtn" destination="loX-db-BID" id="6QH-iL-uT2"/>
+                <outlet property="voiceBtn" destination="4ks-uQ-YnF" id="vV9-PH-Jdi"/>
+                <outlet property="voicetimeLabel" destination="wTf-Xu-Wd0" id="91E-Fs-HYy"/>
             </connections>
         </view>
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
         <image name="imageBackground" width="75" height="15"/>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonClick" width="63" height="63"/>
+        <image name="playButtonPause" width="26" height="26"/>
+        <image name="playButtonPlay" width="30" height="30"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
+        <image name="video-play" width="71" height="71"/>
     </resources>
 </document>

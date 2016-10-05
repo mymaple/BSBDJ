@@ -37,6 +37,13 @@
 }
 
 - (void)clickPublish {
+    //如果要实现半透明图层覆盖，可选择自定义 view 或者 vc.view 放到
+    //当然要注意点击事件的控制,也可以通过新建窗口隔离实现
+//    UIView *view = [[UIView alloc]init];
+//    view.frame = SCREEN_BOUNDS;
+//    view.backgroundColor = RGBA(0, 0, 0, 0.2);
+//    [APPLICATION.keyWindow.rootViewController.view addSubview:view];
+    
     MaplePublishViewController *vc = [[MaplePublishViewController alloc]init];
     [APPLICATION.keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
 }
