@@ -14,6 +14,8 @@
 
 #import "MapleEssence.h"
 #import "MapleEssencePictureView.h"
+#import "MapleTopCmt.h"
+#import "MapleUser.h"
 
 @interface MapleEssenceTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
@@ -37,6 +39,9 @@
  *  pictureView
  */
 @property (nonatomic, weak) MapleEssencePictureView *pictureView;
+@property (weak, nonatomic) IBOutlet UIView *cmtView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @end
 @implementation MapleEssenceTableViewCell
@@ -95,7 +100,16 @@
         self.pictureView.frame = essence.pictureF;
         self.pictureView.essence = essence;
     }
-
+    
+    if (essence.top_cmt.count > 0) {
+        self.cmtView.hidden = NO;
+        self.contentLabel.text = [NSString stringWithFormat:@"%@:%@",essence.top_cmt[0].user.username,essence.top_cmt[0].content];
+    }else{
+        self.cmtView.hidden = YES;
+    }
+    
+ 
+    
 }
 
 - (NSString*)toString:(NSInteger)integer withPlaceholder:(NSString*)placeholder{

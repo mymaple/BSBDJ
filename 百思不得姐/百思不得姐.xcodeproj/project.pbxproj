@@ -12,6 +12,12 @@
 		D80D79CC1DA39850008FA838 /* MaplePictureShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80D79CA1DA39850008FA838 /* MaplePictureShowViewController.xib */; };
 		D80D79D21DA3DCD8008FA838 /* MaplePublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D79D01DA3DCD8008FA838 /* MaplePublishViewController.m */; };
 		D83BEB7A1DA0FB0500D588EF /* NSDate+MapleDataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D83BEB791DA0FB0500D588EF /* NSDate+MapleDataTools.m */; };
+		D83E24601DA5E90900156C65 /* MapleTopCmt.m in Sources */ = {isa = PBXBuildFile; fileRef = D83E245F1DA5E90900156C65 /* MapleTopCmt.m */; };
+		D83E24631DA5E94A00156C65 /* MapleUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D83E24621DA5E94A00156C65 /* MapleUser.m */; };
+		D83E24671DA6243A00156C65 /* MapleCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83E24651DA6243A00156C65 /* MapleCommentViewController.m */; };
+		D83E24681DA6243A00156C65 /* MapleCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83E24661DA6243A00156C65 /* MapleCommentViewController.xib */; };
+		D83E246C1DA6864800156C65 /* MapleCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83E246A1DA6864800156C65 /* MapleCommentTableViewCell.m */; };
+		D83E246D1DA6864800156C65 /* MapleCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83E246B1DA6864800156C65 /* MapleCommentTableViewCell.xib */; };
 		D83F387A1D9E844200D122F6 /* MapleEssence.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F38791D9E844200D122F6 /* MapleEssence.m */; };
 		D83F387E1D9ED02A00D122F6 /* MapleEssenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F387C1D9ED02A00D122F6 /* MapleEssenceTableViewCell.m */; };
 		D83F387F1D9ED02A00D122F6 /* MapleEssenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83F387D1D9ED02A00D122F6 /* MapleEssenceTableViewCell.xib */; };
@@ -90,6 +96,16 @@
 		D83BEB781DA0FB0500D588EF /* NSDate+MapleDataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MapleDataTools.h"; sourceTree = "<group>"; };
 		D83BEB791DA0FB0500D588EF /* NSDate+MapleDataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MapleDataTools.m"; sourceTree = "<group>"; };
 		D83BEB7B1DA1369800D588EF /* MasonryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryConfig.h; sourceTree = "<group>"; };
+		D83E245E1DA5E90900156C65 /* MapleTopCmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTopCmt.h; sourceTree = "<group>"; };
+		D83E245F1DA5E90900156C65 /* MapleTopCmt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleTopCmt.m; sourceTree = "<group>"; };
+		D83E24611DA5E94A00156C65 /* MapleUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleUser.h; sourceTree = "<group>"; };
+		D83E24621DA5E94A00156C65 /* MapleUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleUser.m; sourceTree = "<group>"; };
+		D83E24641DA6243A00156C65 /* MapleCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleCommentViewController.h; sourceTree = "<group>"; };
+		D83E24651DA6243A00156C65 /* MapleCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleCommentViewController.m; sourceTree = "<group>"; };
+		D83E24661DA6243A00156C65 /* MapleCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleCommentViewController.xib; sourceTree = "<group>"; };
+		D83E24691DA6864800156C65 /* MapleCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleCommentTableViewCell.h; sourceTree = "<group>"; };
+		D83E246A1DA6864800156C65 /* MapleCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleCommentTableViewCell.m; sourceTree = "<group>"; };
+		D83E246B1DA6864800156C65 /* MapleCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleCommentTableViewCell.xib; sourceTree = "<group>"; };
 		D83F38781D9E844200D122F6 /* MapleEssence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssence.h; sourceTree = "<group>"; };
 		D83F38791D9E844200D122F6 /* MapleEssence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleEssence.m; sourceTree = "<group>"; };
 		D83F387B1D9ED02A00D122F6 /* MapleEssenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssenceTableViewCell.h; sourceTree = "<group>"; };
@@ -342,6 +358,9 @@
 				D80D79C81DA39850008FA838 /* MaplePictureShowViewController.h */,
 				D80D79C91DA39850008FA838 /* MaplePictureShowViewController.m */,
 				D80D79CA1DA39850008FA838 /* MaplePictureShowViewController.xib */,
+				D83E24641DA6243A00156C65 /* MapleCommentViewController.h */,
+				D83E24651DA6243A00156C65 /* MapleCommentViewController.m */,
+				D83E24661DA6243A00156C65 /* MapleCommentViewController.xib */,
 				D8FAC6521D9818E5006BC864 /* Model */,
 				D8FAC6531D9818E5006BC864 /* View */,
 			);
@@ -520,6 +539,10 @@
 				D8FAC6551D98190C006BC864 /* MapleTagRecommend.m */,
 				D83F38781D9E844200D122F6 /* MapleEssence.h */,
 				D83F38791D9E844200D122F6 /* MapleEssence.m */,
+				D83E245E1DA5E90900156C65 /* MapleTopCmt.h */,
+				D83E245F1DA5E90900156C65 /* MapleTopCmt.m */,
+				D83E24611DA5E94A00156C65 /* MapleUser.h */,
+				D83E24621DA5E94A00156C65 /* MapleUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -536,6 +559,9 @@
 				D8586ABC1DA282C8002EB943 /* MapleEssencePictureView.h */,
 				D8586ABD1DA282C8002EB943 /* MapleEssencePictureView.m */,
 				D8586ABF1DA282DB002EB943 /* MapleEssencePictureView.xib */,
+				D83E24691DA6864800156C65 /* MapleCommentTableViewCell.h */,
+				D83E246A1DA6864800156C65 /* MapleCommentTableViewCell.m */,
+				D83E246B1DA6864800156C65 /* MapleCommentTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,8 +681,10 @@
 				D878331F1D9669DE00CC7F93 /* Localizable.strings in Resources */,
 				D8FAC65B1D981D58006BC864 /* MapleTagRecommendTableViewCell.xib in Resources */,
 				D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */,
+				D83E24681DA6243A00156C65 /* MapleCommentViewController.xib in Resources */,
 				D80D79CC1DA39850008FA838 /* MaplePictureShowViewController.xib in Resources */,
 				D878330F1D963B7200CC7F93 /* MapleRecommendCategoryCell.xib in Resources */,
+				D83E246D1DA6864800156C65 /* MapleCommentTableViewCell.xib in Resources */,
 				D87833111D963B7200CC7F93 /* MapleRecommendUserCell.xib in Resources */,
 				D8586AC01DA282DB002EB943 /* MapleEssencePictureView.xib in Resources */,
 				D83F387F1D9ED02A00D122F6 /* MapleEssenceTableViewCell.xib in Resources */,
@@ -734,8 +762,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8FAC65A1D981D58006BC864 /* MapleTagRecommendTableViewCell.m in Sources */,
+				D83E24601DA5E90900156C65 /* MapleTopCmt.m in Sources */,
 				D8B7E50E1D9BE82F00DC542C /* MaplePushguideView.m in Sources */,
 				D87833181D963B7200CC7F93 /* UIViewExt.m in Sources */,
+				D83E24631DA5E94A00156C65 /* MapleUser.m in Sources */,
 				D878331B1D963B7200CC7F93 /* MaplePublishTabBar.m in Sources */,
 				D84C3CFB1D9F71B7003A89FB /* NSObject+MapleUnicode.m in Sources */,
 				D878331C1D963B7200CC7F93 /* AppDelegate.m in Sources */,
@@ -744,6 +774,7 @@
 				D80D79D21DA3DCD8008FA838 /* MaplePublishViewController.m in Sources */,
 				D84C3D011D9F7446003A89FB /* NSDictionary+MapleUnicode.m in Sources */,
 				D85158981D9D2EDD007D39D4 /* MapleEsssnceTableViewController.m in Sources */,
+				D83E246C1DA6864800156C65 /* MapleCommentTableViewCell.m in Sources */,
 				D87833191D963B7200CC7F93 /* MapleBarButtonItem.m in Sources */,
 				D83F387E1D9ED02A00D122F6 /* MapleEssenceTableViewCell.m in Sources */,
 				D87833131D963B7200CC7F93 /* MapleNewViewController.m in Sources */,
@@ -760,6 +791,7 @@
 				D83BEB7A1DA0FB0500D588EF /* NSDate+MapleDataTools.m in Sources */,
 				D878331A1D963B7200CC7F93 /* MapleNavigationController.m in Sources */,
 				D87833101D963B7200CC7F93 /* MapleRecommendUserCell.m in Sources */,
+				D83E24671DA6243A00156C65 /* MapleCommentViewController.m in Sources */,
 				D878330C1D963B7200CC7F93 /* MapleRecommendCategory.m in Sources */,
 				D87833171D963B7200CC7F93 /* BaseViewController.m in Sources */,
 				D83F387A1D9E844200D122F6 /* MapleEssence.m in Sources */,

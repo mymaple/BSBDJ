@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
+@class MapleTopCmt;
 
 @interface MapleEssence : NSObject
 
@@ -109,6 +109,16 @@
  */
 @property (nonatomic, assign) NSInteger videotime;
 
+
+/**
+ *  top_cmt
+ */
+@property (nonatomic, strong) NSArray<MapleTopCmt*> *top_cmt;
+
+/**
+ *  ID
+ */
+@property (nonatomic, copy) NSString *ID;
 
 //辅助属性
 

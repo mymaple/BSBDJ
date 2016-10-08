@@ -16,6 +16,7 @@
 
 #import "MapleEssenceTableViewCell.h"
 #import "MapleEssence.h"
+#import "MapleCommentViewController.h"
 
 static NSString* const MPEssence = @"Essence";
 @interface MapleEsssnceTableViewController()
@@ -153,7 +154,11 @@ static NSString* const MPEssence = @"Essence";
     return self.essnces[indexPath.row].cellHeight;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MapleCommentViewController *vc = [[MapleCommentViewController alloc]init];
+    vc.essence = self.essnces[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 /**
