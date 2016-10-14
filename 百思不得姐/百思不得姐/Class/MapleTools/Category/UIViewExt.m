@@ -213,4 +213,14 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 	
 	self.frame = newframe;	
 }
+
+
+- (BOOL) mp_isShowingOnWindow {
+//    CGRect realFrame = [self.superview convertRect:self.frame toView:nil];//nil == APPLICATION.keyWindow
+    CGRect realFrame = [APPLICATION.keyWindow convertRect:self.frame fromView:self.superview];
+    return self.hidden == NO && self.alpha >0.01
+            && self.window == APPLICATION.keyWindow
+            && CGRectIntersectsRect(realFrame, APPLICATION.keyWindow.frame);
+}
+
 @end

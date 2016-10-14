@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MapleTabBarController.h"
 #import "MaplePushguideView.h"
+#import "MapleTopStatusBar.h"
 
 static NSString* const MAPLEBUNDLEKEY = @"CFBundleShortVersionString";
 
@@ -31,6 +32,8 @@ static NSString* const MAPLEBUNDLEKEY = @"CFBundleShortVersionString";
     [MaplePushguideView showIn:self.window];
     
     
+    
+    [MapleTopStatusBar show];
     return YES;
 }
 

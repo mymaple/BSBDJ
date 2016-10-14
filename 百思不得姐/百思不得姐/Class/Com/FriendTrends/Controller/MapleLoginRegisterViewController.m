@@ -32,6 +32,7 @@
     // Do any additional setup after loading the view from its nib.
     if(self.type == MapleRegister)
         [self registerBtn:nil];
+    APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
 
 }
 
@@ -53,13 +54,15 @@
 
 #pragma  mark - 状态栏文字设置
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    //亮色
-    return UIStatusBarStyleLightContent;
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    //亮色
+//    return UIStatusBarStyleLightContent;
+//}
 
 - (IBAction)closeViewController:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        APPLICATION.statusBarStyle = UIStatusBarStyleDefault;
+    }];
 }
 
 

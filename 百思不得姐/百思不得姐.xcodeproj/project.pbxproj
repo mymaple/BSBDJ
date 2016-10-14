@@ -31,6 +31,7 @@
 		D85158981D9D2EDD007D39D4 /* MapleEsssnceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85158971D9D2EDD007D39D4 /* MapleEsssnceTableViewController.m */; };
 		D8586ABE1DA282C8002EB943 /* MapleEssencePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8586ABD1DA282C8002EB943 /* MapleEssencePictureView.m */; };
 		D8586AC01DA282DB002EB943 /* MapleEssencePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8586ABF1DA282DB002EB943 /* MapleEssencePictureView.xib */; };
+		D862B7891DAA64A80005457C /* MapleTopStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D862B7881DAA64A80005457C /* MapleTopStatusBar.m */; };
 		D87833071D963B7200CC7F93 /* MapleEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */; };
 		D87833081D963B7200CC7F93 /* MapleFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87832D31D963B7200CC7F93 /* MapleFriendTrendsViewController.m */; };
 		D87833091D963B7200CC7F93 /* MapleFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87832D41D963B7200CC7F93 /* MapleFriendTrendsViewController.xib */; };
@@ -133,6 +134,8 @@
 		D8586ABC1DA282C8002EB943 /* MapleEssencePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssencePictureView.h; sourceTree = "<group>"; };
 		D8586ABD1DA282C8002EB943 /* MapleEssencePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleEssencePictureView.m; sourceTree = "<group>"; };
 		D8586ABF1DA282DB002EB943 /* MapleEssencePictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapleEssencePictureView.xib; sourceTree = "<group>"; };
+		D862B7871DAA64A80005457C /* MapleTopStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleTopStatusBar.h; sourceTree = "<group>"; };
+		D862B7881DAA64A80005457C /* MapleTopStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleTopStatusBar.m; sourceTree = "<group>"; };
 		D87832CE1D963B7200CC7F93 /* MapleEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleEssenceViewController.h; sourceTree = "<group>"; };
 		D87832CF1D963B7200CC7F93 /* MapleEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapleEssenceViewController.m; sourceTree = "<group>"; };
 		D87832D21D963B7200CC7F93 /* MapleFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapleFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -506,6 +509,8 @@
 				D8B7E50C1D9BE82F00DC542C /* MaplePushguideView.h */,
 				D8B7E50D1D9BE82F00DC542C /* MaplePushguideView.m */,
 				D8B7E5131D9BEDA600DC542C /* MaplePushguideView.xib */,
+				D862B7871DAA64A80005457C /* MapleTopStatusBar.h */,
+				D862B7881DAA64A80005457C /* MapleTopStatusBar.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -788,6 +793,7 @@
 				D87833121D963B7200CC7F93 /* MapleMeViewController.m in Sources */,
 				D84C3CFE1D9F7258003A89FB /* NSArray+MapleUnicode.m in Sources */,
 				D87833071D963B7200CC7F93 /* MapleEssenceViewController.m in Sources */,
+				D862B7891DAA64A80005457C /* MapleTopStatusBar.m in Sources */,
 				D83BEB7A1DA0FB0500D588EF /* NSDate+MapleDataTools.m in Sources */,
 				D878331A1D963B7200CC7F93 /* MapleNavigationController.m in Sources */,
 				D87833101D963B7200CC7F93 /* MapleRecommendUserCell.m in Sources */,

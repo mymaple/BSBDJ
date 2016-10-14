@@ -33,4 +33,7 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 - (void) mp_moveBy: (CGPoint) delta;
 - (void) mp_scaleBy: (CGFloat) scaleFactor;
 - (void) mp_fitInSize: (CGSize) aSize;
+
+- (BOOL) mp_isShowingOnWindow ;
+
 @end
